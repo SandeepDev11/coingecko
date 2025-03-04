@@ -17,8 +17,10 @@ import {
 import Form from "react-bootstrap/Form";
 import TopbarLeft from "./TopbarLeft";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faGear } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faGear, faStar } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../assets/images/logo.webp";
+import candy from "../../assets/images/candy.svg";
+import { Link } from "react-router";
 
 const Home = () => {
   const topbarLeftData = [
@@ -26,6 +28,8 @@ const Home = () => {
     { title: "Exchanges:", valueNum: 17204, urlNum: "/" },
     { title: "Market Cap:", valueNum: 17204, urlNum: "/" },
     { title: "24h Volume:", valueNum: 17204, urlNum: "/" },
+    { title: "BTC Dominance:", valueNum: 17204, urlNum: "/" },
+    { title: "BTC Dominance:", valueNum: 17204, urlNum: "/" },
     { title: "BTC Dominance:", valueNum: 17204, urlNum: "/" },
   ];
   return (
@@ -45,19 +49,19 @@ const Home = () => {
                 <div className="rightTop-section">
                   <div className="rightTop-section-content">
                     <NavDropdown title={<FontAwesomeIcon icon={faGear} />}>
-                      <NavDropdown.Item href="#">
+                      <NavDropdown.Item to="/#">
                         <div className="d-flex justify-content-between align-items-center gap-5">
                           <div>Language</div>
                           <div>English</div>
                         </div>
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#">
+                      <NavDropdown.Item to="/#">
                         <div className="d-flex justify-content-between align-items-center gap-5">
                           <div>Currency</div>
                           <div>USD</div>
                         </div>
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#">
+                      <NavDropdown.Item to="/#">
                         <div className="d-flex justify-content-between align-items-center gap-5">
                           <div>Dark Mode</div>
                           <div>
@@ -70,10 +74,10 @@ const Home = () => {
                     </NavDropdown>
                   </div>
                   <div className="rightTop-section-content-login">
-                    <a href="">Login</a>
+                    <Link to="/">Login</Link>
                   </div>
                   <div className="rightTop-section-content-signup">
-                    <a href="">Sign Up</a>
+                    <Link to="/">Sign Up</Link>
                   </div>
                 </div>
               </Col>
@@ -92,254 +96,287 @@ const Home = () => {
                   <div className="menu-list">
                     <ul>
                       <li>
-                        <a href="">Cryptocurrencies</a>
+                        <Link to="/">Cryptocurrencies</Link>
                         <div className="menu-list-dropdown">
-                          <a href="">
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Categories</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Cryptocurrencies</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Cryptocurrencies</div>
-                          </a>
+                          </Link>
                         </div>
                       </li>
                       <li>
-                        <a href="">Exchanges</a>
+                        <Link to="/">Exchanges</Link>
                         <div className="menu-list-dropdown">
-                          <a href="">
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Categories</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Cryptocurrencies</div>
-                          </a>
+                          </Link>
                         </div>
                       </li>
                       <li>
-                        <a href="">NFT</a>
+                        <Link to="/">NFT</Link>
                         <div className="menu-list-dropdown">
-                          <a href="">
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Categories</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Cryptocurrencies</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Cryptocurrencies</div>
-                          </a>
+                          </Link>
                         </div>
                       </li>
                       <li>
-                        <a href="">Learn</a>
+                        <Link to="/">Learn</Link>
                         <div className="menu-list-dropdown">
-                          <a href="">
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Categories</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Cryptocurrencies</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Cryptocurrencies</div>
-                          </a>
+                          </Link>
                         </div>
                       </li>
                       <li>
-                        <a href="">Products</a>
+                        <Link to="/">Products</Link>
                         <div className="menu-list-dropdown">
-                          <a href="">
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Categories</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Cryptocurrencies</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Cryptocurrencies</div>
-                          </a>
+                          </Link>
                         </div>
                       </li>
                       <li>
-                        <a href="">API</a>
+                        <Link to="/">API</Link>
                         <div className="menu-list-dropdown">
-                          <a href="">
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Categories</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Cryptocurrencies</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>By Market Cap</div>
-                          </a>
-                          <a href="">
+                          </Link>
+                          <Link to="/">
                             <div>
                               <FontAwesomeIcon icon={faBars} />
                             </div>
                             <div>Cryptocurrencies</div>
-                          </a>
+                          </Link>
                         </div>
                       </li>
                     </ul>
                   </div>
                 </div>
               </Col>
-              <Col lg={4}>
+              <Col lg={4} className="pe-0">
                 <div className="menu-list">
-                  <ul className="justify-content-end">
+                  <ul className="justify-content-end align-items-center">
                     <li>
-                      <a href="">Candy</a>
+                      <Link to="/">
+                        <div className="d-flex align-items-center gap-2">
+                          <img src={candy} alt="candy" width="10px" />
+                          <p className="mb-0">Candy</p>
+                        </div>
+                      </Link>
                     </li>
                     <li>
-                      <a href="">Portfolio</a>
+                      <Link to="/">
+                        <div className="protfolioIcons d-flex align-items-center gap-2">
+                          <FontAwesomeIcon icon={faStar} />
+                          <p className="mb-0">Portfolio</p>
+                        </div>
+                      </Link>
                     </li>
                     <li>
-                      <input type="text" placeholder="Search" />
+                      <div className="searchBar d-flex align-items-center">
+                        <input
+                          placeholder="Search"
+                          type="search"
+                          className="mr-sm-2 form-control"
+                          style={{ border: "unset !important" }}
+                        />
+                        <div className="searchIcon">
+                          <svg
+                            fill="#000"
+                            height="20"
+                            viewBox="0 -960 960 960"
+                            width="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-label="search"
+                          >
+                            <title>Search</title>
+                            <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"></path>
+                          </svg>
+                        </div>
+                        <div className="searchLink">
+                          <span>/</span>
+                        </div>
+                      </div>
                     </li>
                   </ul>
                 </div>
