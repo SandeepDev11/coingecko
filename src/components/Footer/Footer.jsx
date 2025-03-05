@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom"; // Fixed import
 import logo from "../../assets/images/logo.webp";
+import googlePlay from "../../assets/images/google_play_store.svg";
+import appStore from "../../assets/images/apple_app_store.svg";
 
 const Footer = () => {
   const footerLinks = [
@@ -116,9 +118,19 @@ const Footer = () => {
           </Col>
         </Row>
 
-        <Row className="mt-4">
-          <Col className="text-center">
+        <Row className="mt-4 align-items-center">
+          <Col className="text-start">
             <p>© 2025 CoinGecko. All Rights Reserved.</p>
+          </Col>
+          <Col>
+            <div className="d-flex justify-content-end pb-4">
+              <Link to="/">
+                <img src={googlePlay} alt="googlePlay" width="150" />
+              </Link>
+              <Link to="/">
+                <img src={appStore} alt="appStore" width="150" />
+              </Link>
+            </div>
           </Col>
         </Row>
 

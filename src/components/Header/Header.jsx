@@ -91,7 +91,9 @@ const Home = () => {
               <Col lg={8}>
                 <div className="header-left-section">
                   <div className="header-logo">
-                    <img src={logo} alt="logo" width="140px" />
+                    <Link to="/">
+                      <img src={logo} alt="logo" width="140px" />
+                    </Link>
                   </div>
                   <div className="menu-list">
                     <ul>
