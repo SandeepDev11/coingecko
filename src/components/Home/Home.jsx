@@ -13,15 +13,14 @@ import redGraph from "../../assets/images/redGraph.svg";
 import greenGraph from "../../assets/images/greenGraph.svg";
 import trandingIconsImg from "../../assets/images/icons1.webp";
 import { MdKeyboardArrowRight } from "react-icons/md";
-// import { Link } from "react-router";
 import { Link } from "react-router-dom";
 import { FaFire, FaRankingStar, FaShapes } from "react-icons/fa6";
 import TabHome from "./TabHome";
-import { HiMiniNumberedList, HiNumberedList, HiOutlineSparkles } from "react-icons/hi2";
-import { faGear } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { HiMiniNumberedList, HiOutlineSparkles } from "react-icons/hi2";
 import CoinList from "../CoinList/CoinList";
-
+import FaqSection from "./FaqSection";
+import blogImg from "../../assets/images/blog.webp";
+import BlogCard from "../Blog/BlogCard";
 const Home = () => {
   const [showDesc, setShowDesc] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -85,6 +84,45 @@ const Home = () => {
       icons: <HiMiniNumberedList />,
       title: "Highlights",
       tabUrl: "/",
+    },
+  ];
+
+  const blogCardData = [
+    {
+      blogImg: blogImg,
+      title:
+        "Former Girlfriend of LA 'Godfather' Agrees to Plead Guilty Over $2.6M Tax Fraud",
+      tagImg: trandingIconsImg,
+      tagNum: "12.5%",
+      timeStamp: "22 minutes ago",
+      author: "Decrypt",
+    },
+    {
+      blogImg: blogImg,
+      title:
+        "Former Girlfriend of LA 'Godfather' Agrees to Plead Guilty Over $2.6M Tax Fraud",
+      tagImg: trandingIconsImg,
+      tagNum: "12.5%",
+      timeStamp: "22 minutes ago",
+      author: "Decrypt",
+    },
+    {
+      blogImg: blogImg,
+      title:
+        "Former Girlfriend of LA 'Godfather' Agrees to Plead Guilty Over $2.6M Tax Fraud",
+      tagImg: trandingIconsImg,
+      tagNum: "12.5%",
+      timeStamp: "22 minutes ago",
+      author: "Decrypt",
+    },
+    {
+      blogImg: blogImg,
+      title:
+        "Former Girlfriend of LA 'Godfather' Agrees to Plead Guilty Over $2.6M Tax Fraud",
+      tagImg: trandingIconsImg,
+      tagNum: "12.5%",
+      timeStamp: "22 minutes ago",
+      author: "Decrypt",
     },
   ];
 
@@ -296,6 +334,51 @@ const Home = () => {
 
         {/* Coin List Section */}
         <CoinList />
+
+        {/* Faq section */}
+        <FaqSection />
+
+        {/* News section */}
+        <section className="blog-section">
+          <Container style={{ borderBottom: "1px solid var(--border-color)" }}>
+            <div className="blog-title">
+              <h4 className="fw-semibold">Latest Crypto News</h4>
+            </div>
+            <Row className="py-3">
+              {blogCardData.map((item, index) => (
+                <Col lg={3} key={index}>
+                  <BlogCard blogCardData={item} />
+                </Col>
+              ))}
+            </Row>
+          </Container>
+          <div className="blog-btn text-center mt-4">
+            <Link to="/" className="CusBtn">
+              See More News
+            </Link>
+          </div>
+        </section>
+
+        {/* Articles section */}
+        <section className="blog-section pt-4">
+          <Container style={{ borderBottom: "1px solid var(--border-color)" }}>
+            <div className="blog-title">
+              <h4 className="fw-semibold">Featured Articles</h4>
+            </div>
+            <Row className="py-3">
+              {blogCardData.map((item, index) => (
+                <Col lg={3} key={index}>
+                  <BlogCard blogCardData={item} />
+                </Col>
+              ))}
+            </Row>
+          </Container>
+          <div className="blog-btn text-center mt-4">
+            <Link to="/" className="CusBtn">
+              See More Articles
+            </Link>
+          </div>
+        </section>
       </main>
     </>
   );

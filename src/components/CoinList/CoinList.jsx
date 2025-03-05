@@ -10,7 +10,7 @@ import icon1 from "../../assets/images/icons1.webp";
 const ChangeIndicator = ({ value, isPositive }) => {
   const arrowColor = isPositive ? "var(--darkGreen-color)" : "var(--textRed)";
   return (
-    <span style={{ color: arrowColor }}>
+    <span style={{ color: arrowColor, textWrap: "nowrap" }}>
       <svg
         stroke="currentColor"
         fill="currentColor"
@@ -75,7 +75,7 @@ const cryptoData = [
     chartImg: chartImg,
   },
   {
-    id: 43,
+    id: 47,
     fullName: "Artificial Superintelligence Alliance FET",
     price: "$175.07",
     change1h: { value: 10.2, isPositive: false },
@@ -86,7 +86,7 @@ const cryptoData = [
     chartImg: chartImg2,
   },
   {
-    id: 44,
+    id: 48,
     fullName: "Aave AAVE",
     price: "$175.07",
     change1h: { value: 10.2, isPositive: false },
@@ -97,7 +97,7 @@ const cryptoData = [
     chartImg: chartImg,
   },
   {
-    id: 45,
+    id: 49,
     fullName: "Artificial Superintelligence Alliance FET",
     price: "$175.07",
     change1h: { value: 10.2, isPositive: true },
@@ -108,7 +108,7 @@ const cryptoData = [
     chartImg: chartImg2,
   },
   {
-    id: 46,
+    id: 50,
     fullName: "Artificial Superintelligence Alliance FET",
     price: "$175.07",
     change1h: { value: 10.2, isPositive: true },
@@ -149,7 +149,7 @@ function CoinList() {
                     </td>
                     <td className="align-middle">{coin.id}</td>
                     <td className="align-middle">
-                      <div className="d-flex align-items-center gap-2">
+                      <div className="d-flex align-items-center gap-2 text-nowrap">
                         <img src={icon1} alt={coin.fullName} width="20px" />
                         {coin.fullName}
                       </div>

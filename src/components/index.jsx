@@ -4,4 +4,7 @@ import Home from './Home/Home';
 import BoxMarket from './Home/BoxMarket';
 import TabHome from './Home/TabHome';   
 import CoinList from './CoinList/CoinList';
-export { Header, TopbarLeft, Home, BoxMarket, TabHome, CoinList };
+import FaqSection from './Home/FaqSection'; 
+import BlogCard from './Blog/BlogCard';
+import Footer from './Footer/Footer';
+export { Header, TopbarLeft, Home, BoxMarket, TabHome, CoinList, FaqSection, BlogCard, Footer };

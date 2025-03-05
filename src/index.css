@@ -18,15 +18,15 @@ body {
 :root {
   --dark-color: #222222;
   --light-color: #fefefe;
-  --border-color: #e5e7eb;
+  --border-color: #f7f7f7;
   --tw-ring-offset-shadow: 0 0 transparent;
   --tw-ring-shadow: 0 0 transparent;
   --tw-shadow: 0 4px 0 0 #cbd5e1;
   --green-color: #4bcc00;
-  --darkGreen-color: #35AF00;
-  --lightGreen-color: #E8FCC9;
+  --darkGreen-color: #35af00;
+  --lightGreen-color: #e8fcc9;
   --inputColor: #eff2f5;
-  --textRed : #ff3a33;
+  --textRed: #ff3a33;
 }
 
 a {
@@ -173,10 +173,10 @@ a {
   position: absolute;
   top: 50%;
   left: 0.5rem;
-  transform: translate(0, -50%); 
+  transform: translate(0, -50%);
 }
 
-.searchIcon svg{
+.searchIcon svg {
   width: 16px;
   height: 16px;
 }
@@ -184,19 +184,19 @@ a {
 .searchLink {
   position: absolute;
   top: 50%;
-  right:0.7rem;
-  transform: translate(0, -50%);  
+  right: 0.7rem;
+  transform: translate(0, -50%);
 }
 
 .searchLink span {
-  background: #CBD5E1;
+  background: #cbd5e1;
   padding: 0.1rem 0.5rem;
   border-radius: 0.3rem;
   font-size: 12px !important;
 }
 
-.protfolioIcons svg path{
-  fill: #EAB308 !important;
+.protfolioIcons svg path {
+  fill: #eab308 !important;
 }
 
 /* Home Page Css */
@@ -205,7 +205,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem;
-  border: 2px solid #EFF2F5;
+  border: 2px solid #eff2f5;
   border-radius: 1rem;
 }
 
@@ -213,7 +213,7 @@ a {
   padding: 0.5rem;
   background: transparent;
   border-radius: 0.5rem;
-  &:hover{
+  &:hover {
     background: #f1f1f1;
   }
 }
@@ -221,7 +221,7 @@ a {
 .boxMarketWrapper {
   height: 100%;
   padding: 1.2rem 0.5rem;
-  border: 2px solid #EFF2F5;
+  border: 2px solid #eff2f5;
   border-radius: 1rem;
 }
 
@@ -239,8 +239,50 @@ a {
   text-wrap: nowrap;
 }
 
-.tabArea-right-wrapper .rightTop-section-content{
+.tabArea-right-wrapper .rightTop-section-content {
   background-color: var(--light-color);
   border-color: none;
   box-shadow: none;
+}
+
+.faq-section {
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+}
+
+.blogCardTag {
+  background: var(--inputColor);
+  display: inline-flex !important;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.5rem;
+}
+
+.CusBtn {
+  background-color: var(--inputColor);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.footer-links li {
+  padding-bottom: 0.8rem;
+}
+
+.footerCol h6 {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+ul.footer-links li a {
+  color: #64748b !important;
+}
+
+.subscribeInput {
+  width: 300px;
+  font-size: 14px !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
