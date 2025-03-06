@@ -1,28 +1,19 @@
-import React from "react";
-import {
-  Button,
-  Col,
-  Container,
-  FormCheck,
-  FormControl,
-  Nav,
-  Navbar,
-  NavbarBrand,
-  NavbarCollapse,
-  NavbarToggle,
-  NavDropdown,
-  NavLink,
-  Row,
-} from "react-bootstrap";
+import React, { useState } from "react";
+import { Col, Container, FormCheck, NavDropdown, Row } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import TopbarLeft from "./TopbarLeft";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faGear, faStar } from "@fortawesome/free-solid-svg-icons";
-import logo from "../../assets/images/logo.webp";
-import candy from "../../assets/images/candy.svg";
+import { faBars, faGear } from "@fortawesome/free-solid-svg-icons";
+// import logo from "../../assets/images/logo.webp";
+import logo from "../../assets/images/logo.png";
+// import candy from "../../assets/images/candy.svg";
 import { Link } from "react-router";
+import Login from "../Auth/Login";
+import { IoSettingsOutline } from "react-icons/io5";
 
 const Home = () => {
+  const [showModal, setShowModal] = useState(false);
+
   const topbarLeftData = [
     { title: "Coins:", valueNum: 17204, urlNum: "/" },
     { title: "Exchanges:", valueNum: 17204, urlNum: "/" },
@@ -47,8 +38,11 @@ const Home = () => {
               </Col>
               <Col lg={2}>
                 <div className="rightTop-section">
-                  <div className="rightTop-section-content">
-                    <NavDropdown title={<FontAwesomeIcon icon={faGear} />}>
+                  <button className="rightTop-section-content">
+                    <NavDropdown
+                      style={{ fontSize: "12px" }}
+                      title={<IoSettingsOutline />}
+                    >
                       <NavDropdown.Item to="/#">
                         <div className="d-flex justify-content-between align-items-center gap-5">
                           <div>Language</div>
@@ -72,13 +66,27 @@ const Home = () => {
                         </div>
                       </NavDropdown.Item>
                     </NavDropdown>
-                  </div>
-                  <div className="rightTop-section-content-login">
-                    <Link to="/">Login</Link>
-                  </div>
-                  <div className="rightTop-section-content-signup">
-                    <Link to="/">Sign Up</Link>
-                  </div>
+                  </button>
+                  <button onClick={() => setShowModal(true)}>
+                    <div
+                      className="fw-semibold"
+                      style={{ fontSize: "12px", letterSpacing: "0.04rem" }}
+                    >
+                      Login
+                    </div>
+                    <Login
+                      show={showModal}
+                      handleClose={() => setShowModal(false)}
+                    />
+                  </button>
+                  <button className="rightTop-section-content-signup">
+                    <div
+                      className="fw-semibold"
+                      style={{ fontSize: "12px", letterSpacing: "0.04rem" }}
+                    >
+                      Sign Up
+                    </div>
+                  </button>
                 </div>
               </Col>
             </Row>
@@ -249,7 +257,7 @@ const Home = () => {
                           </Link>
                         </div>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link to="/">Products</Link>
                         <div className="menu-list-dropdown">
                           <Link to="/">
@@ -330,7 +338,7 @@ const Home = () => {
                             <div>Cryptocurrencies</div>
                           </Link>
                         </div>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -338,7 +346,7 @@ const Home = () => {
               <Col lg={4} className="pe-0">
                 <div className="menu-list">
                   <ul className="justify-content-end align-items-center">
-                    <li>
+                    {/* <li>
                       <Link to="/">
                         <div className="d-flex align-items-center gap-2">
                           <img src={candy} alt="candy" width="10px" />
@@ -353,7 +361,7 @@ const Home = () => {
                           <p className="mb-0">Portfolio</p>
                         </div>
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <div className="searchBar d-flex align-items-center">
                         <input

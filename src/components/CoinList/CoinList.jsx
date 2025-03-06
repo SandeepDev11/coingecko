@@ -167,7 +167,7 @@ function CoinList() {
                     <td className="align-middle text-end">{coin.volume24h}</td>
                     <td className="align-middle text-end">{coin.marketCap}</td>
                     <td className="align-middle text-end">
-                      <Link to="/">
+                      <Link to="singlepage">
                         <img src={coin.chartImg} alt="Chart" />
                       </Link>
                     </td>

@@ -21,6 +21,7 @@ import CoinList from "../CoinList/CoinList";
 import FaqSection from "./FaqSection";
 import blogImg from "../../assets/images/blog.webp";
 import BlogCard from "../Blog/BlogCard";
+import CustomSwitch from "../CustomSwitch/CustomSwitch";
 const Home = () => {
   const [showDesc, setShowDesc] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -160,6 +161,7 @@ const Home = () => {
                         label="Highlights"
                         className="fw-semibold"
                       />
+                      {/* <CustomSwitch label="Highlights" /> */}
                     </Col>
                   </Row>
                   {!showDesc && (
@@ -294,7 +296,7 @@ const Home = () => {
                 ))}
               </div>
               <div className="tabArea-right-wrapper">
-                <div className="rightTop-section-content">
+                <button className="rightTop-section-content">
                   <NavDropdown
                     title={
                       <span className="d-flex align-items-center gap-2 fw-bold">
@@ -326,7 +328,7 @@ const Home = () => {
                       </div>
                     </NavDropdown.Item>
                   </NavDropdown>
-                </div>
+                </button>
               </div>
             </div>
           </Container>

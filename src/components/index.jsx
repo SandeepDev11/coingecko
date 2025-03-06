@@ -9,4 +9,7 @@ import BlogCard from './Blog/BlogCard';
 import Footer from './Footer/Footer';       
 import SinglePage from './SinglePage/SinglePage';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
-export { Header, TopbarLeft, Home, BoxMarket, TabHome, CoinList, FaqSection, BlogCard, Footer, SinglePage, Breadcrumbs };
+import BTCConverter from './BTCconverter/BTCConverter';
+import CoinInfo from './SinglePage/CoinInfo';
+import CustomSwitch from './CustomSwitch/CustomSwitch';
+export { Header, TopbarLeft, Home, BoxMarket, TabHome, CoinList, FaqSection, BlogCard, Footer, SinglePage, Breadcrumbs, BTCConverter, CoinInfo, CustomSwitch };

@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom"; // Fixed import
-import logo from "../../assets/images/logo.webp";
+// import logo from "../../assets/images/logo.webp";
+import logo from "../../assets/images/logo.png";
 import googlePlay from "../../assets/images/google_play_store.svg";
 import appStore from "../../assets/images/apple_app_store.svg";
 
