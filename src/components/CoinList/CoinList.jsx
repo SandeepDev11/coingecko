@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
-import { FaRegStar } from "react-icons/fa6";
+import { FaRegStar, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import chartImg from "../../assets/images/greenGraph.svg";
 import chartImg2 from "../../assets/images/redGraph.svg";
-import icon1 from "../../assets/images/icons1.webp";
 
-// Component to display percentage change with an arrow icon
 const ChangeIndicator = ({ value, isPositive }) => {
   const arrowColor = isPositive ? "var(--darkGreen-color)" : "var(--textRed)";
   return (
@@ -31,96 +29,213 @@ const ChangeIndicator = ({ value, isPositive }) => {
 
 const cryptoData = [
   {
-    id: 43,
-    fullName: "Artificial Superintelligence Alliance FET",
-    price: "$175.07",
-    change1h: { value: 10.2, isPositive: false },
-    change24h: { value: 15, isPositive: true },
-    change7d: { value: 12, isPositive: false },
-    volume24h: "$409,344,880",
-    marketCap: "$2,642,361,974",
+    id: 1,
+    fullName: "Bitcoin BTC",
+    price: "$64,320.15",
+    change1h: { value: 0.5, isPositive: true },
+    change24h: { value: 3.2, isPositive: false },
+    change7d: { value: 5.6, isPositive: true },
+    change30d: { value: 10.2, isPositive: true },
+    volume24h: "$32,540,982,124",
+    marketCap: "$1,250,000,000,000",
+    fdv: "$1,250,000,000,000",
     chartImg: chartImg2,
+    coinImg: "https://cryptologos.cc/logos/bitcoin-btc-logo.png",
   },
   {
-    id: 44,
-    fullName: "Aave AAVE",
-    price: "$175.07",
-    change1h: { value: 10.2, isPositive: false },
-    change24h: { value: 15, isPositive: false },
-    change7d: { value: 12, isPositive: true },
-    volume24h: "$409,344,880",
-    marketCap: "$2,642,361,974",
+    id: 2,
+    fullName: "Ethereum ETH",
+    price: "$3,472.80",
+    change1h: { value: 0.3, isPositive: false },
+    change24h: { value: 2.5, isPositive: true },
+    change7d: { value: 6.1, isPositive: true },
+    change30d: { value: 10.2, isPositive: true },
+    volume24h: "$18,750,962,345",
+    marketCap: "$415,000,000,000",
+    fdv: "$1,250,000,000,000",
     chartImg: chartImg,
+    coinImg: "https://cryptologos.cc/logos/ethereum-eth-logo.png",
   },
   {
-    id: 45,
-    fullName: "Artificial Superintelligence Alliance FET",
-    price: "$175.07",
-    change1h: { value: 10.2, isPositive: true },
-    change24h: { value: 15, isPositive: true },
-    change7d: { value: 12, isPositive: false },
-    volume24h: "$409,344,880",
-    marketCap: "$2,642,361,974",
+    id: 3,
+    fullName: "Solana SOL",
+    price: "$135.22",
+    change1h: { value: 1.2, isPositive: true },
+    change24h: { value: 4.1, isPositive: true },
+    change7d: { value: 8.9, isPositive: false },
+    change30d: { value: 10.2, isPositive: true },
+    volume24h: "$6,342,876,543",
+    marketCap: "$58,900,000,000",
+    fdv: "$1,250,000,000,000",
     chartImg: chartImg2,
+    coinImg: "https://cryptologos.cc/logos/solana-sol-logo.png",
   },
   {
-    id: 46,
-    fullName: "Artificial Superintelligence Alliance FET",
-    price: "$175.07",
-    change1h: { value: 10.2, isPositive: true },
-    change24h: { value: 15, isPositive: false },
-    change7d: { value: 12, isPositive: true },
-    volume24h: "$409,344,880",
-    marketCap: "$2,642,361,974",
+    id: 4,
+    fullName: "Cardano ADA",
+    price: "$0.64",
+    change1h: { value: 0.8, isPositive: true },
+    change24h: { value: 1.5, isPositive: false },
+    change7d: { value: 2.4, isPositive: true },
+    change30d: { value: 10.2, isPositive: true },
+    volume24h: "$2,123,876,543",
+    marketCap: "$20,400,000,000",
+    fdv: "$1,250,000,000,000",
     chartImg: chartImg,
+    coinImg: "https://cryptologos.cc/logos/cardano-ada-logo.png",
   },
   {
-    id: 47,
-    fullName: "Artificial Superintelligence Alliance FET",
-    price: "$175.07",
-    change1h: { value: 10.2, isPositive: false },
-    change24h: { value: 15, isPositive: true },
-    change7d: { value: 12, isPositive: false },
-    volume24h: "$409,344,880",
-    marketCap: "$2,642,361,974",
+    id: 5,
+    fullName: "XRP",
+    price: "$0.54",
+    change1h: { value: 0.7, isPositive: false },
+    change24h: { value: 2.1, isPositive: true },
+    change7d: { value: 4.5, isPositive: false },
+    change30d: { value: 10.2, isPositive: true },
+    volume24h: "$1,876,234,567",
+    marketCap: "$29,540,000,000",
+    fdv: "$1,250,000,000,000",
     chartImg: chartImg2,
+    coinImg: "https://cryptologos.cc/logos/xrp-xrp-logo.png",
   },
   {
-    id: 48,
-    fullName: "Aave AAVE",
-    price: "$175.07",
-    change1h: { value: 10.2, isPositive: false },
-    change24h: { value: 15, isPositive: false },
-    change7d: { value: 12, isPositive: true },
-    volume24h: "$409,344,880",
-    marketCap: "$2,642,361,974",
+    id: 6,
+    fullName: "Polkadot DOT",
+    price: "$8.25",
+    change1h: { value: 0.4, isPositive: false },
+    change24h: { value: 2.9, isPositive: false },
+    change7d: { value: 5.1, isPositive: true },
+    change30d: { value: 10.2, isPositive: true },
+    volume24h: "$980,456,789",
+    marketCap: "$11,320,000,000",
+    fdv: "$1,250,000,000,000",
     chartImg: chartImg,
+    coinImg: "https://cryptologos.cc/logos/polkadot-new-dot-logo.png",
   },
   {
-    id: 49,
-    fullName: "Artificial Superintelligence Alliance FET",
-    price: "$175.07",
-    change1h: { value: 10.2, isPositive: true },
-    change24h: { value: 15, isPositive: true },
-    change7d: { value: 12, isPositive: false },
-    volume24h: "$409,344,880",
-    marketCap: "$2,642,361,974",
+    id: 7,
+    fullName: "Dogecoin DOGE",
+    price: "$0.14",
+    change1h: { value: 1.5, isPositive: true },
+    change24h: { value: 3.8, isPositive: true },
+    change7d: { value: 7.2, isPositive: false },
+    change30d: { value: 10.2, isPositive: true },
+    volume24h: "$2,456,987,654",
+    marketCap: "$19,000,000,000",
+    fdv: "$1,250,000,000,000",
     chartImg: chartImg2,
+    coinImg: "https://cryptologos.cc/logos/dogecoin-doge-logo.png",
   },
   {
-    id: 50,
-    fullName: "Artificial Superintelligence Alliance FET",
-    price: "$175.07",
-    change1h: { value: 10.2, isPositive: true },
-    change24h: { value: 15, isPositive: false },
-    change7d: { value: 12, isPositive: true },
-    volume24h: "$409,344,880",
-    marketCap: "$2,642,361,974",
+    id: 8,
+    fullName: "Polygon MATIC",
+    price: "$1.12",
+    change1h: { value: 0.9, isPositive: true },
+    change24h: { value: 2.3, isPositive: false },
+    change7d: { value: 5.4, isPositive: true },
+    change30d: { value: 10.2, isPositive: true },
+    volume24h: "$780,345,678",
+    marketCap: "$10,850,000,000",
+    fdv: "$1,250,000,000,000",
     chartImg: chartImg,
+    coinImg: "https://cryptologos.cc/logos/polygon-matic-logo.png",
+  },
+  {
+    id: 9,
+    fullName: "Litecoin LTC",
+    price: "$92.34",
+    change1h: { value: 0.5, isPositive: false },
+    change24h: { value: 1.8, isPositive: true },
+    change7d: { value: 4.7, isPositive: false },
+    change30d: { value: 10.2, isPositive: true },
+    volume24h: "$1,234,567,890",
+    marketCap: "$6,520,000,000",
+    fdv: "$1,250,000,000,000",
+    chartImg: chartImg2,
+    coinImg: "https://cryptologos.cc/logos/litecoin-ltc-logo.png",
+  },
+  {
+    id: 10,
+    fullName: "Chainlink LINK",
+    price: "$17.45",
+    change1h: { value: 1.1, isPositive: true },
+    change24h: { value: 3.2, isPositive: false },
+    change7d: { value: 6.3, isPositive: true },
+    change30d: { value: 10.2, isPositive: true },
+    volume24h: "$780,234,567",
+    marketCap: "$10,200,000,000",
+    fdv: "$1,250,000,000,000",
+    chartImg: chartImg,
+    coinImg: "https://cryptologos.cc/logos/chainlink-link-logo.png",
+  },
+  {
+    id: 11,
+    fullName: "Avalanche AVAX",
+    price: "$25.18",
+    change1h: { value: 0.9, isPositive: false },
+    change24h: { value: 4.5, isPositive: true },
+    change7d: { value: 7.8, isPositive: true },
+    change30d: { value: 10.2, isPositive: true },
+    volume24h: "$654,987,321",
+    marketCap: "$9,800,000,000",
+    fdv: "$1,250,000,000,000",
+    chartImg: chartImg2,
+    coinImg: "https://cryptologos.cc/logos/avalanche-avax-logo.png",
+  },
+  {
+    id: 12,
+    fullName: "Uniswap UNI",
+    price: "$8.75",
+    change1h: { value: 0.6, isPositive: true },
+    change24h: { value: 2.7, isPositive: false },
+    change7d: { value: 5.5, isPositive: true },
+    change30d: { value: 10.2, isPositive: true },
+    volume24h: "$432,109,876",
+    marketCap: "$5,320,000,000",
+    fdv: "$1,250,000,000,000",
+    chartImg: chartImg,
+    coinImg: "https://cryptologos.cc/logos/uniswap-uni-logo.png",
+  },
+  {
+    id: 13,
+    fullName: "Stellar XLM",
+    price: "$0.12",
+    change1h: { value: 1.4, isPositive: true },
+    change24h: { value: 3.9, isPositive: false },
+    change7d: { value: 8.1, isPositive: true },
+    change30d: { value: 10.2, isPositive: true },
+    volume24h: "$209,765,432",
+    marketCap: "$4,200,000,000",
+    fdv: "$1,250,000,000,000",
+    chartImg: chartImg2,
+    coinImg: "https://cryptologos.cc/logos/stellar-xlm-logo.png",
   },
 ];
 
 function CoinList() {
+  const [filledStars, setFilledStars] = useState({});
+
+  const toggleStar = (id) => {
+    setFilledStars((prev) => ({
+      ...prev,
+      [id]: !prev[id], // Toggle only the clicked star
+    }));
+  };
+  const tableHeaders = [
+    "",
+    "#",
+    "Coin",
+    "Price",
+    "1h",
+    "24h",
+    "7d",
+    "30d",
+    "24h Volume",
+    "FDV",
+    "Market Cap",
+    "Last 7 Days",
+  ];
+
   return (
     <section className="coinList-section">
       <Container>
@@ -129,28 +244,40 @@ function CoinList() {
             <Table responsive hover>
               <thead>
                 <tr>
-                  <th className="align-middle fw-medium"></th>
-                  <th className="align-middle fw-medium">#</th>
-                  <th className="align-middle fw-medium">Coin</th>
-                  <th className="align-middle fw-medium text-end">Price</th>
-                  <th className="align-middle fw-medium text-end">1h</th>
-                  <th className="align-middle fw-medium text-end">24h</th>
-                  <th className="align-middle fw-medium text-end">7d</th>
-                  <th className="align-middle fw-medium text-end">24h Volume</th>
-                  <th className="align-middle fw-medium text-end">Market Cap</th>
-                  <th className="align-middle fw-medium text-end">Last 7 Days</th>
+                  {tableHeaders.map((header, index) => (
+                    <th
+                      key={index}
+                      className={`align-middle fw-medium ${
+                        index > 2 ? "text-end" : ""
+                      }`}
+                    >
+                      {header}
+                    </th>
+                  ))}
                 </tr>
               </thead>
               <tbody>
                 {cryptoData.map((coin) => (
                   <tr key={coin.id} className="py-3">
-                    <td className="align-middle">
-                      <FaRegStar />
+                    <td
+                      className="align-middle"
+                      onClick={() => toggleStar(coin.id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      {filledStars[coin.id] ? (
+                        <FaStar color="gold" />
+                      ) : (
+                        <FaRegStar />
+                      )}
                     </td>
                     <td className="align-middle">{coin.id}</td>
                     <td className="align-middle">
                       <div className="d-flex align-items-center gap-2 text-nowrap">
-                        <img src={icon1} alt={coin.fullName} width="20px" />
+                        <img
+                          src={coin.coinImg}
+                          alt={coin.fullName}
+                          width="20px"
+                        />
                         {coin.fullName}
                       </div>
                     </td>
@@ -164,7 +291,11 @@ function CoinList() {
                     <td className="align-middle text-end">
                       <ChangeIndicator {...coin.change7d} />
                     </td>
+                    <td className="align-middle text-end">
+                      <ChangeIndicator {...coin.change30d} />
+                    </td>
                     <td className="align-middle text-end">{coin.volume24h}</td>
+                    <td className="align-middle text-end">{coin.fdv}</td>
                     <td className="align-middle text-end">{coin.marketCap}</td>
                     <td className="align-middle text-end">
                       <Link to="singlepage">

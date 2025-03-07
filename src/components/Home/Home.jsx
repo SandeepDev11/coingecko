@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Button,
   Col,
   Container,
   Form,
@@ -21,10 +22,11 @@ import CoinList from "../CoinList/CoinList";
 import FaqSection from "./FaqSection";
 import blogImg from "../../assets/images/blog.webp";
 import BlogCard from "../Blog/BlogCard";
-import CustomSwitch from "../CustomSwitch/CustomSwitch";
+import CustomizeTable from "./CustomizeTable";
 const Home = () => {
   const [showDesc, setShowDesc] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [showSection, setShowSection] = useState(true);
 
   const toggleDesc = (e) => {
     e.preventDefault();
@@ -33,25 +35,49 @@ const Home = () => {
 
   const boxMarketData = [
     {
-      trandingIcons: trandingIconsImg,
-      trandingIconsAlt: "trandingIcons",
-      trandingIconsName: "Hyperliquid",
-      valueTranding: "$0.5406",
-      valueTrandingPercent: "24.8%",
+      trandingIcons: "https://cryptologos.cc/logos/bitcoin-btc-logo.png",
+      trandingIconsAlt: "Bitcoin",
+      trandingIconsName: "Bitcoin",
+      valueTranding: "$62,345",
+      valueTrandingPercent: "5.2%",
     },
     {
-      trandingIcons: trandingIconsImg,
-      trandingIconsAlt: "trandingIcons",
-      trandingIconsName: "Hyperliquid",
-      valueTranding: "$0.5406",
-      valueTrandingPercent: "24.8%",
+      trandingIcons: "https://cryptologos.cc/logos/ethereum-eth-logo.png",
+      trandingIconsAlt: "Ethereum",
+      trandingIconsName: "Ethereum",
+      valueTranding: "$3,450",
+      valueTrandingPercent: "2.8%",
     },
     {
-      trandingIcons: trandingIconsImg,
-      trandingIconsAlt: "trandingIcons",
-      trandingIconsName: "Hyperliquid",
-      valueTranding: "$0.5406",
-      valueTrandingPercent: "24.8%",
+      trandingIcons: "https://cryptologos.cc/logos/solana-sol-logo.png",
+      trandingIconsAlt: "Solana",
+      trandingIconsName: "Solana",
+      valueTranding: "$145.23",
+      valueTrandingPercent: "7.1%",
+    },
+  ];
+
+  const boxMarketData2 = [
+    {
+      trandingIcons: "https://cryptologos.cc/logos/binance-coin-bnb-logo.png",
+      trandingIconsAlt: "Binance Coin",
+      trandingIconsName: "Binance Coin",
+      valueTranding: "$410.45",
+      valueTrandingPercent: "3.2%",
+    },
+    {
+      trandingIcons: "https://cryptologos.cc/logos/xrp-xrp-logo.png",
+      trandingIconsAlt: "XRP",
+      trandingIconsName: "XRP",
+      valueTranding: "$0.64",
+      valueTrandingPercent: "4.5%",
+    },
+    {
+      trandingIcons: "https://cryptologos.cc/logos/cardano-ada-logo.png",
+      trandingIconsAlt: "Cardano",
+      trandingIconsName: "Cardano",
+      valueTranding: "$0.78",
+      valueTrandingPercent: "6.8%",
     },
   ];
 
@@ -160,8 +186,9 @@ const Home = () => {
                         id="custom-switch"
                         label="Highlights"
                         className="fw-semibold"
+                        onChange={() => setShowSection((prev) => !prev)}
+                        checked={showSection}
                       />
-                      {/* <CustomSwitch label="Highlights" /> */}
                     </Col>
                   </Row>
                   {!showDesc && (
@@ -190,77 +217,79 @@ const Home = () => {
         </section>
 
         {/* Box Market Section */}
-        <section className="home-section">
-          <Container>
-            <Row>
-              <Col lg={4}>
-                <div className="boxMarket mb-2">
-                  <div className="boxMarket-content-left">
-                    <h5 className="fw-semibold">$2,843,511,074,602</h5>
-                    <p className="mb-0">
-                      Market Cap{" "}
-                      <span style={{ color: "var(--textRed)" }}>
-                        <TiArrowSortedDown /> 12.5%
-                      </span>
-                    </p>
-                  </div>
-                  <div className="boxMarket-content-right">
-                    <div className="boxMarket-content-right-img">
-                      <img src={redGraph} alt="" />
+        {showSection && (
+          <section className="home-section">
+            <Container>
+              <Row>
+                <Col lg={4}>
+                  <div className="boxMarket mb-2">
+                    <div className="boxMarket-content-left">
+                      <h5 className="fw-semibold">$2,843,511,074,602</h5>
+                      <p className="mb-0">
+                        Market Cap{" "}
+                        <span style={{ color: "var(--textRed)" }}>
+                          <TiArrowSortedDown /> 12.5%
+                        </span>
+                      </p>
+                    </div>
+                    <div className="boxMarket-content-right">
+                      <div className="boxMarket-content-right-img">
+                        <img src={redGraph} alt="" />
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="boxMarket">
-                  <div className="boxMarket-content-left">
-                    <h5 className="fw-semibold">$2,843,511,074,602</h5>
-                    <p className="mb-0">24h Trading Volume</p>
-                  </div>
-                  <div className="boxMarket-content-right">
-                    <div className="boxMarket-content-right-img">
-                      <img src={greenGraph} alt="" />
+                  <div className="boxMarket">
+                    <div className="boxMarket-content-left">
+                      <h5 className="fw-semibold">$2,843,511,074,602</h5>
+                      <p className="mb-0">24h Trading Volume</p>
+                    </div>
+                    <div className="boxMarket-content-right">
+                      <div className="boxMarket-content-right-img">
+                        <img src={greenGraph} alt="" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Col>
-              <Col lg={4} className="px-0">
-                <div className="boxMarketWrapper">
-                  <div className="d-flex justify-content-between align-items-center px-1">
-                    <h6 className="fw-semibold">🔥 Trending</h6>
-                    <p className="mb-0">
-                      <Link to="/">
-                        View All <MdKeyboardArrowRight />
-                      </Link>
-                    </p>
-                  </div>
+                </Col>
+                <Col lg={4} className="px-0">
+                  <div className="boxMarketWrapper">
+                    <div className="d-flex justify-content-between align-items-center px-1 boxHeading">
+                      <h6 className="fw-semibold">🔥 Trending</h6>
+                      <p className="mb-0">
+                        <Link to="/">
+                          View All <MdKeyboardArrowRight />
+                        </Link>
+                      </p>
+                    </div>
 
-                  {boxMarketData.map((item, index) => (
-                    <BoxMarket key={index} boxMarketData={item} />
-                  ))}
-                </div>
-              </Col>
-              <Col lg={4}>
-                <div className="boxMarketWrapper">
-                  <div className="d-flex justify-content-between align-items-center px-1">
-                    <h6 className="fw-semibold">🔥 Trending</h6>
-                    <p className="mb-0">
-                      <Link to="/">
-                        View All <MdKeyboardArrowRight />
-                      </Link>
-                    </p>
+                    {boxMarketData.map((item, index) => (
+                      <BoxMarket key={index} boxMarketData={item} />
+                    ))}
                   </div>
+                </Col>
+                <Col lg={4}>
+                  <div className="boxMarketWrapper">
+                    <div className="d-flex justify-content-between align-items-center px-1 boxHeading">
+                      <h6 className="fw-semibold">🚀 Top Gainers</h6>
+                      <p className="mb-0">
+                        <Link to="/">
+                          View All <MdKeyboardArrowRight />
+                        </Link>
+                      </p>
+                    </div>
 
-                  {boxMarketData.map((item, index) => (
-                    <BoxMarket key={index} boxMarketData={item} />
-                  ))}
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </section>
+                    {boxMarketData2.map((item, index) => (
+                      <BoxMarket key={index} boxMarketData={item} />
+                    ))}
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </section>
+        )}
 
         {/* Tab Area Section */}
         <section className="tabArea-wrapper py-4">
-          <Container>
+          <Container className="pe-0">
             <div className="d-flex justify-content-between align-items-center gap-2">
               <div className="tabArea-left-wrapper d-flex gap-1">
                 {tabData.map((item, index) => (
@@ -296,39 +325,7 @@ const Home = () => {
                 ))}
               </div>
               <div className="tabArea-right-wrapper">
-                <button className="rightTop-section-content">
-                  <NavDropdown
-                    title={
-                      <span className="d-flex align-items-center gap-2 fw-bold">
-                        <HiOutlineSparkles />
-                        <span>Customise</span>
-                      </span>
-                    }
-                  >
-                    <NavDropdown.Item to="/#">
-                      <div className="d-flex justify-content-between align-items-center gap-5">
-                        <div>Language</div>
-                        <div>English</div>
-                      </div>
-                    </NavDropdown.Item>
-                    <NavDropdown.Item to="/#">
-                      <div className="d-flex justify-content-between align-items-center gap-5">
-                        <div>Currency</div>
-                        <div>USD</div>
-                      </div>
-                    </NavDropdown.Item>
-                    <NavDropdown.Item to="/#">
-                      <div className="d-flex justify-content-between align-items-center gap-5">
-                        <div>Dark Mode</div>
-                        <div>
-                          <Form>
-                            <FormCheck type="switch" id="custom-switch" />
-                          </Form>
-                        </div>
-                      </div>
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                </button>
+                <CustomizeTable />
               </div>
             </div>
           </Container>

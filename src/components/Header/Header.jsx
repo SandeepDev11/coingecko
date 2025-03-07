@@ -2,14 +2,39 @@ import React, { useState } from "react";
 import { Col, Container, FormCheck, NavDropdown, Row } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import TopbarLeft from "./TopbarLeft";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faGear } from "@fortawesome/free-solid-svg-icons";
-// import logo from "../../assets/images/logo.webp";
 import logo from "../../assets/images/logo.png";
-// import candy from "../../assets/images/candy.svg";
 import { Link } from "react-router";
-import Login from "../Auth/Login";
 import { IoSettingsOutline } from "react-icons/io5";
+import AuthModal from "../Auth/AuthModal";
+import SearchComponent from "../SearchComponent/SearchComponent";
+import {
+  RiBarChartFill,
+  RiStackFill,
+  RiShareBoxFill,
+  RiFireFill,
+  RiStarFill,
+  RiAddCircleFill,
+  RiArrowUpDownFill,
+  RiToolsFill,
+  RiCoinFill,
+  RiScales3Fill,
+  RiExchangeDollarFill,
+  RiGlobalFill,
+  RiSwapFill,
+  RiLineChartFill,
+  RiHeartFill,
+  RiCoinsFill,
+  RiPriceTag3Fill,
+  RiBookOpenFill,
+  RiSearchFill,
+  RiNewspaperFill,
+  RiFileTextFill,
+  RiMoneyDollarCircleFill,
+  RiVideoFill,
+  RiMailFill,
+  RiListCheck2,
+} from "react-icons/ri";
+import { MenuDropdown } from "..";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -23,6 +48,95 @@ const Home = () => {
     { title: "BTC Dominance:", valueNum: 17204, urlNum: "/" },
     { title: "BTC Dominance:", valueNum: 17204, urlNum: "/" },
   ];
+
+  const menuData = [
+    {
+      title: "Cryptocurrencies",
+      items: [
+        { to: "/", icon: RiBarChartFill, label: "By Market Cap" },
+        { to: "/categories", icon: RiStackFill, label: "Categories" },
+        { to: "/chains", icon: RiShareBoxFill, label: "Chains" },
+        { to: "/highlights", icon: RiStarFill, label: "Highlights" },
+        {
+          to: "/new-cryptocurrencies",
+          icon: RiAddCircleFill,
+          label: "New Cryptocurrencies",
+        },
+        {
+          to: "/gainers-losers",
+          icon: RiArrowUpDownFill,
+          label: "Gainers & Losers",
+        },
+        { to: "/all-coins", icon: RiCoinFill, label: "All Coins" },
+        {
+          to: "/compare-coins-nft",
+          icon: RiScales3Fill,
+          label: "Compare Coins and NFT",
+        },
+        { to: "/converter", icon: RiExchangeDollarFill, label: "Converter" },
+        { to: "/global-chart", icon: RiGlobalFill, label: "Global Chart" },
+      ],
+    },
+    {
+      title: "Exchanges",
+      items: [
+        {
+          to: "/crypto-exchanges",
+          icon: RiExchangeDollarFill,
+          label: "Crypto Exchanges",
+        },
+        {
+          to: "/decentralized-exchanges",
+          icon: RiSwapFill,
+          label: "Decentralized Exchanges",
+        },
+        { to: "/derivatives", icon: RiLineChartFill, label: "Derivatives" },
+      ],
+    },
+    {
+      title: "NFT",
+      items: [
+        {
+          to: "/nft-floor-price",
+          icon: RiPriceTag3Fill,
+          label: "NFT Floor Price",
+        },
+        {
+          to: "/nft-related-coins",
+          icon: RiCoinsFill,
+          label: "NFT Related Coins",
+        },
+        { to: "/nft-watchlist", icon: RiHeartFill, label: "NFT Watchlist" },
+        {
+          to: "/nft-global-chart",
+          icon: RiBarChartFill,
+          label: "NFT Global Chart",
+        },
+      ],
+    },
+    {
+      title: "Learn",
+      items: [
+        { to: "/learn-crypto", icon: RiBookOpenFill, label: "Learn Crypto" },
+        {
+          to: "/research-insights",
+          icon: RiSearchFill,
+          label: "Research Insights",
+        },
+        { to: "/news", icon: RiNewspaperFill, label: "News" },
+        { to: "/reports", icon: RiFileTextFill, label: "Reports" },
+        {
+          to: "/learn-earn",
+          icon: RiMoneyDollarCircleFill,
+          label: "Learn & Earn",
+        },
+        { to: "/videos", icon: RiVideoFill, label: "Videos" },
+        { to: "/newsletter", icon: RiMailFill, label: "Newsletter" },
+        { to: "/glossary", icon: RiListCheck2, label: "Glossary" },
+      ],
+    },
+  ];
+
   return (
     <>
       <header>
@@ -55,15 +169,24 @@ const Home = () => {
                           <div>USD</div>
                         </div>
                       </NavDropdown.Item>
-                      <NavDropdown.Item to="/#">
-                        <div className="d-flex justify-content-between align-items-center gap-5">
-                          <div>Dark Mode</div>
-                          <div>
-                            <Form>
-                              <FormCheck type="switch" id="custom-switch" />
-                            </Form>
+                      <NavDropdown.Item
+                        as="div"
+                        className="d-flex justify-content-between align-items-center "
+                      >
+                        <Link
+                          to="/#"
+                          className="text-decoration-none text-dark flex-grow-1"
+                        >
+                          <div className="d-flex justify-content-between align-items-center gap-5">
+                            <span>Dark Mode</span>
                           </div>
-                        </div>
+                        </Link>
+                        <Form
+                          className="d-inline-block"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FormCheck type="switch" id="custom-switch" />
+                        </Form>
                       </NavDropdown.Item>
                     </NavDropdown>
                   </button>
@@ -74,12 +197,11 @@ const Home = () => {
                     >
                       Login
                     </div>
-                    <Login
-                      show={showModal}
-                      handleClose={() => setShowModal(false)}
-                    />
                   </button>
-                  <button className="rightTop-section-content-signup">
+                  <button
+                    className="rightTop-section-content-signup"
+                    onClick={() => setShowModal(true)}
+                  >
                     <div
                       className="fw-semibold"
                       style={{ fontSize: "12px", letterSpacing: "0.04rem" }}
@@ -91,6 +213,7 @@ const Home = () => {
               </Col>
             </Row>
           </Container>
+          <AuthModal show={showModal} handleClose={() => setShowModal(false)} />
         </section>
 
         <section className="header-section">
@@ -105,240 +228,13 @@ const Home = () => {
                   </div>
                   <div className="menu-list">
                     <ul>
-                      <li>
-                        <Link to="/">Cryptocurrencies</Link>
-                        <div className="menu-list-dropdown">
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Categories</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Cryptocurrencies</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Cryptocurrencies</div>
-                          </Link>
-                        </div>
-                      </li>
-                      <li>
-                        <Link to="/">Exchanges</Link>
-                        <div className="menu-list-dropdown">
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Categories</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Cryptocurrencies</div>
-                          </Link>
-                        </div>
-                      </li>
-                      <li>
-                        <Link to="/">NFT</Link>
-                        <div className="menu-list-dropdown">
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Categories</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Cryptocurrencies</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Cryptocurrencies</div>
-                          </Link>
-                        </div>
-                      </li>
-                      <li>
-                        <Link to="/">Learn</Link>
-                        <div className="menu-list-dropdown">
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Categories</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Cryptocurrencies</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Cryptocurrencies</div>
-                          </Link>
-                        </div>
-                      </li>
-                      {/* <li>
-                        <Link to="/">Products</Link>
-                        <div className="menu-list-dropdown">
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Categories</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Cryptocurrencies</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Cryptocurrencies</div>
-                          </Link>
-                        </div>
-                      </li>
-                      <li>
-                        <Link to="/">API</Link>
-                        <div className="menu-list-dropdown">
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Categories</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Cryptocurrencies</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>By Market Cap</div>
-                          </Link>
-                          <Link to="/">
-                            <div>
-                              <FontAwesomeIcon icon={faBars} />
-                            </div>
-                            <div>Cryptocurrencies</div>
-                          </Link>
-                        </div>
-                      </li> */}
+                      {menuData.map((menu) => (
+                        <MenuDropdown
+                          key={menu.title}
+                          title={menu.title}
+                          items={menu.items}
+                        />
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -346,47 +242,8 @@ const Home = () => {
               <Col lg={4} className="pe-0">
                 <div className="menu-list">
                   <ul className="justify-content-end align-items-center">
-                    {/* <li>
-                      <Link to="/">
-                        <div className="d-flex align-items-center gap-2">
-                          <img src={candy} alt="candy" width="10px" />
-                          <p className="mb-0">Candy</p>
-                        </div>
-                      </Link>
-                    </li>
                     <li>
-                      <Link to="/">
-                        <div className="protfolioIcons d-flex align-items-center gap-2">
-                          <FontAwesomeIcon icon={faStar} />
-                          <p className="mb-0">Portfolio</p>
-                        </div>
-                      </Link>
-                    </li> */}
-                    <li>
-                      <div className="searchBar d-flex align-items-center">
-                        <input
-                          placeholder="Search"
-                          type="search"
-                          className="mr-sm-2 form-control"
-                          style={{ border: "unset !important" }}
-                        />
-                        <div className="searchIcon">
-                          <svg
-                            fill="#000"
-                            height="20"
-                            viewBox="0 -960 960 960"
-                            width="20"
-                            xmlns="http://www.w3.org/2000/svg"
-                            aria-label="search"
-                          >
-                            <title>Search</title>
-                            <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"></path>
-                          </svg>
-                        </div>
-                        <div className="searchLink">
-                          <span>/</span>
-                        </div>
-                      </div>
+                      <SearchComponent />
                     </li>
                   </ul>
                 </div>

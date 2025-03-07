@@ -1,15 +1,58 @@
-import Header from './Header/Header';
-import TopbarLeft from './Header/TopbarLeft';
-import Home from './Home/Home';
-import BoxMarket from './Home/BoxMarket';
-import TabHome from './Home/TabHome';   
-import CoinList from './CoinList/CoinList';
-import FaqSection from './Home/FaqSection'; 
-import BlogCard from './Blog/BlogCard';
-import Footer from './Footer/Footer';       
-import SinglePage from './SinglePage/SinglePage';
-import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
-import BTCConverter from './BTCconverter/BTCConverter';
-import CoinInfo from './SinglePage/CoinInfo';
-import CustomSwitch from './CustomSwitch/CustomSwitch';
-export { Header, TopbarLeft, Home, BoxMarket, TabHome, CoinList, FaqSection, BlogCard, Footer, SinglePage, Breadcrumbs, BTCConverter, CoinInfo, CustomSwitch };
+// Header
+import Header from "./Header/Header";
+import TopbarLeft from "./Header/TopbarLeft";
+import MenuDropdown from "./Header/MenuDropdown";
+
+// Home
+import Home from "./Home/Home";
+import BoxMarket from "./Home/BoxMarket";
+import TabHome from "./Home/TabHome";
+import FaqSection from "./Home/FaqSection";
+import CustomizeTable from "./Home/CustomizeTable";
+
+// CoinList
+import CoinList from "./CoinList/CoinList";
+
+// Blog
+import BlogCard from "./Blog/BlogCard";
+
+// Footer
+import Footer from "./Footer/Footer";
+
+// SinglePage
+import SinglePage from "./SinglePage/SinglePage";
+import CoinInfo from "./SinglePage/CoinInfo";
+
+// Breadcrumbs
+import Breadcrumbs from "./Breadcrumbs/Breadcrumbs";
+
+// BTCConverter
+import BTCConverter from "./BTCconverter/BTCConverter";
+
+// Auth
+import AuthModal from "./Auth/AuthModal";
+
+// SearchComponent
+import SearchComponent from "./SearchComponent/SearchComponent";
+import PiStatsCard from "./SearchComponent/PiStatsCard";
+
+export {
+  Header,
+  TopbarLeft,
+  MenuDropdown,
+  Home,
+  BoxMarket,
+  TabHome,
+  FaqSection,
+  CustomizeTable,
+  CoinList,
+  BlogCard,
+  Footer,
+  SinglePage,
+  CoinInfo,
+  Breadcrumbs,
+  BTCConverter,
+  AuthModal,
+  SearchComponent,
+  PiStatsCard,
+};

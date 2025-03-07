@@ -562,7 +562,7 @@ function SinglePage() {
           </Col>
           <Col lg={8} className="border-start">
             <div className="singlePage-right">
-              <img src={graphImg} alt="graph" />
+              <img src={graphImg} alt="graph" className="img-fluid" />
               <CoinInfo coinData={coinData} />
             </div>
           </Col>
