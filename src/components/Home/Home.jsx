@@ -14,18 +14,15 @@ import redGraph from "../../assets/images/redGraph.svg";
 import greenGraph from "../../assets/images/greenGraph.svg";
 import trandingIconsImg from "../../assets/images/icons1.webp";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { Link } from "react-router-dom";
-import { FaFire, FaRankingStar, FaShapes } from "react-icons/fa6";
-import TabHome from "./TabHome";
-import { HiMiniNumberedList, HiOutlineSparkles } from "react-icons/hi2";
+import { Link } from "react-router-dom";;
 import CoinList from "../CoinList/CoinList";
 import FaqSection from "./FaqSection";
 import blogImg from "../../assets/images/blog.webp";
 import BlogCard from "../Blog/BlogCard";
 import CustomizeTable from "./CustomizeTable";
+import TabData from "./TabData";
 const Home = () => {
   const [showDesc, setShowDesc] = useState(true);
-  const [activeIndex, setActiveIndex] = useState(0);
   const [showSection, setShowSection] = useState(true);
 
   const toggleDesc = (e) => {
@@ -81,38 +78,6 @@ const Home = () => {
     },
   ];
 
-  const tabData = [
-    {
-      icons: <FaRankingStar />,
-      title: "All",
-      tabUrl: "/",
-    },
-    {
-      icons: <HiMiniNumberedList />,
-      title: "Highlights",
-      tabUrl: "/",
-    },
-    {
-      icons: <FaShapes />,
-      title: "Categories",
-      tabUrl: "/",
-    },
-    {
-      icons: <FaFire />,
-      title: "World Liberty Financial Portfolio",
-      tabUrl: "/",
-    },
-    {
-      icons: <FaFire />,
-      title: "Polkadot Ecosystem",
-      tabUrl: "/",
-    },
-    {
-      icons: <HiMiniNumberedList />,
-      title: "Highlights",
-      tabUrl: "/",
-    },
-  ];
 
   const blogCardData = [
     {
@@ -292,37 +257,7 @@ const Home = () => {
           <Container className="pe-0">
             <div className="d-flex justify-content-between align-items-center gap-2">
               <div className="tabArea-left-wrapper d-flex gap-1">
-                {tabData.map((item, index) => (
-                  <div
-                    key={index}
-                    onClick={() => setActiveIndex(index)}
-                    className={`tabArea-left ${
-                      activeIndex === index ? "active" : ""
-                    }`}
-                    style={{
-                      color:
-                        activeIndex === index
-                          ? "var(--darkGreen-color)"
-                          : "var(--dark-color)",
-                      background:
-                        activeIndex === index
-                          ? "var(--lightGreen-color)"
-                          : "transparent",
-                      fontSize: activeIndex === index ? "14px" : "14px",
-                      padding:
-                        activeIndex === index
-                          ? "0.4rem 0.8rem"
-                          : "0.4rem 0.8rem",
-                      borderRadius: activeIndex === index ? "0.5rem" : "0.5rem",
-                    }}
-                  >
-                    <TabHome
-                      tabData={item}
-                      activeIndex={activeIndex}
-                      index={index}
-                    />
-                  </div>
-                ))}
+                <TabData />
               </div>
               <div className="tabArea-right-wrapper">
                 <CustomizeTable />

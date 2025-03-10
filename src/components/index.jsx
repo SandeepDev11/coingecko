@@ -7,6 +7,7 @@ import MenuDropdown from "./Header/MenuDropdown";
 import Home from "./Home/Home";
 import BoxMarket from "./Home/BoxMarket";
 import TabHome from "./Home/TabHome";
+import TabData from "./Home/TabData";
 import FaqSection from "./Home/FaqSection";
 import CustomizeTable from "./Home/CustomizeTable";
 
@@ -36,6 +37,11 @@ import AuthModal from "./Auth/AuthModal";
 import SearchComponent from "./SearchComponent/SearchComponent";
 import PiStatsCard from "./SearchComponent/PiStatsCard";
 
+// Cryptocurrencies
+import Categories from "./Cryptocurrencies/Categories/Categories";
+import CryptoTreemap from "./Cryptocurrencies/Categories/CryptoTreemap";
+import Chains from "./Cryptocurrencies/Chains/Chains";
+
 export {
   Header,
   TopbarLeft,
@@ -55,4 +61,8 @@ export {
   AuthModal,
   SearchComponent,
   PiStatsCard,
+  Categories,
+  TabData,
+  CryptoTreemap,
+  Chains,
 };

@@ -150,7 +150,7 @@ const Home = () => {
                   })}
                 </div>
               </Col>
-              <Col lg={2}>
+              <Col lg={2} className="pe-0">
                 <div className="rightTop-section">
                   <button className="rightTop-section-content">
                     <NavDropdown

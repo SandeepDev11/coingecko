@@ -11,13 +11,15 @@ import {
 } from "react-router";
 
 import Layout from "./Layout";
-import { Home, SinglePage } from "./components";
+import { Home, SinglePage, Categories, Chains } from "./components";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}> 
+    <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="/singlepage" element={<SinglePage />} />
+      <Route path="/categories" element={<Categories />} />
+      <Route path="/chains" element={<Chains />} />
     </Route>
   )
 );

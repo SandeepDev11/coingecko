@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -50,7 +50,7 @@ a {
   border: 0 !important;
   background: var(--light-color) !important;
   -webkit-box-shadow: 0px 10px 15px #efefef !important;
-          box-shadow: 0px 10px 15px #efefef !important;
+  box-shadow: 0px 10px 15px #efefef !important;
   padding: 1rem !important;
 }
 
@@ -84,15 +84,15 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
 }
 
-.rightTop-section{
+.rightTop-section {
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .leftTop-section-content {
@@ -100,8 +100,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 4px;
 }
 
@@ -128,12 +128,12 @@ button.rightTop-section-content-signup {
   text-wrap: nowrap;
   color: var(--light-color);
   -webkit-box-shadow: 0 2px 0 0 var(--green-color) !important;
-          box-shadow: 0 2px 0 0 var(--green-color) !important;
+  box-shadow: 0 2px 0 0 var(--green-color) !important;
   &:hover {
     background: var(--darkGreen-color) !important;
     border: 2px solid var(--darkGreen-color) !important;
     -webkit-box-shadow: 0 3px 0 0 green !important;
-            box-shadow: 0 3px 0 0 green !important;
+    box-shadow: 0 3px 0 0 green !important;
     color: var(--light-color) !important;
   }
 }
@@ -149,8 +149,8 @@ button.rightTop-section-content-signup {
   display: flex;
   gap: 0rem;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .menu-list {
@@ -191,8 +191,8 @@ button.rightTop-section-content-signup {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
   border-radius: 0.5rem;
   color: var(--dark-color);
@@ -217,7 +217,7 @@ button.rightTop-section-content-signup {
   border: none !important;
   outline: none !important;
   -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
   color: var(--dark-color) !important;
   padding: 0.5rem 0.8rem 0.5rem 1.8rem;
   font-size: 13px;
@@ -228,8 +228,8 @@ button.rightTop-section-content-signup {
   top: 50%;
   left: 0.5rem;
   -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 
 .searchIcon svg {
@@ -242,8 +242,8 @@ button.rightTop-section-content-signup {
   top: 50%;
   right: 0.7rem;
   -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 
 .searchLink span {
@@ -263,11 +263,11 @@ button.rightTop-section-content-signup {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 1.2rem;
   border: 2px solid #eff2f5;
   border-radius: 1rem;
@@ -303,8 +303,8 @@ button.rightTop-section-content-signup {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.3rem;
   font-size: 14px;
   font-weight: 600;
@@ -320,7 +320,7 @@ button.rightTop-section-content-signup {
   background-color: var(--light-color);
   border-color: none;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .faq-section {
@@ -368,7 +368,7 @@ ul.footer-links li a {
   font-size: 14px !important;
   outline: none !important;
   -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 /* Single Page Css */
@@ -379,7 +379,7 @@ ul.footer-links li a {
   border-radius: 8px !important;
   padding: 5px !important;
   -webkit-box-shadow: 0px 10px 15px #efefef !important;
-          box-shadow: 0px 10px 15px #efefef !important;
+  box-shadow: 0px 10px 15px #efefef !important;
   opacity: 1 !important;
 }
 
@@ -430,11 +430,11 @@ ul.footer-links li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0.1rem 0.5rem;
   gap: 0.5rem;
   &:hover {
@@ -468,24 +468,24 @@ span.currencyInputText {
   background: transparent !important;
   border: none !important;
   -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
   outline: none !important;
   &:hover {
     background: transparent !important;
     border: none !important;
     -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+    box-shadow: none !important;
     outline: none !important;
   }
   &:active {
     background: transparent !important;
     border: none !important;
     -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+    box-shadow: none !important;
     outline: none !important;
     -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -497,43 +497,42 @@ button {
   border: 2px solid #cbd5e1 !important;
   border-radius: 0.5rem !important;
   -webkit-box-shadow: 0 2px 0 0 #cbd5e1;
-          box-shadow: 0 2px 0 0 #cbd5e1;
+  box-shadow: 0 2px 0 0 #cbd5e1;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   &:hover {
     -webkit-box-shadow: 0 3px 0 0 #94a3b8;
-            box-shadow: 0 3px 0 0 #94a3b8;
+    box-shadow: 0 3px 0 0 #94a3b8;
     border: 2px solid #ccd6e1;
     background: #f1f5f9 !important;
     color: var(--dark-color) !important;
   }
   &:active {
     -webkit-box-shadow: 0 3px 0 0 #94a3b8 !important;
-            box-shadow: 0 3px 0 0 #94a3b8 !important;
+    box-shadow: 0 3px 0 0 #94a3b8 !important;
     border: 2px solid #ccd6e1 !important;
     background: #f1f5f9 !important;
     -webkit-transform: translatey(3px);
-        -ms-transform: translatey(3px);
-            transform: translatey(3px);
+    -ms-transform: translatey(3px);
+    transform: translatey(3px);
   }
 }
 
-button
-.animateImg {
+button .animateImg {
   -webkit-animation: thumbsUp 1s linear;
-          animation: thumbsUp 1s linear;
+  animation: thumbsUp 1s linear;
 }
 
 @-webkit-keyframes thumbsUp {
   0% {
     -webkit-transform: scale(2.8);
-            transform: scale(2.8);
+    transform: scale(2.8);
     opacity: 1;
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -541,12 +540,12 @@ button
 @keyframes thumbsUp {
   0% {
     -webkit-transform: scale(2.8);
-            transform: scale(2.8);
+    transform: scale(2.8);
     opacity: 1;
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -556,7 +555,7 @@ button
   border-bottom: none;
 }
 
-.nav-tabs .nav-link:hover{
+.nav-tabs .nav-link:hover {
   border-color: transparent !important;
 }
 
@@ -567,13 +566,13 @@ button
   padding: 0.4rem 0.8rem;
   border: none !important;
   -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
   border-radius: 0.5rem;
   border: none !important;
   box-shadow: none !important;
   -webkit-transform: translateY(0) !important;
-      -ms-transform: translateY(0) !important;
-          transform: translateY(0) !important;
+  -ms-transform: translateY(0) !important;
+  transform: translateY(0) !important;
 }
 .nav-item button {
   color: var(--dark-color) !important;
@@ -583,20 +582,19 @@ button
   border-radius: 0.5rem;
   border: none !important;
   -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
   -webkit-transform: translateY(0) !important;
-      -ms-transform: translateY(0) !important;
-          transform: translateY(0) !important;
+  -ms-transform: translateY(0) !important;
+  transform: translateY(0) !important;
 }
-
 
 label.form-check-label {
   margin-right: 0.5rem;
 }
 
 /* Custom Switch Styling */
-.form-switch .form-check-input:checked{
-  --bs-form-switch-bg:none !important;
+.form-switch .form-check-input:checked {
+  --bs-form-switch-bg: none !important;
 }
 
 .form-switch .form-check-input {
@@ -608,7 +606,10 @@ label.form-check-label {
   transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.2s;
   -o-transition: background-color 0.3s ease-in-out, box-shadow 0.2s;
   transition: background-color 0.3s ease-in-out, box-shadow 0.2s;
-  transition: background-color 0.3s ease-in-out, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.2s,
+    -webkit-box-shadow 0.2s;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.2s,
+    -webkit-box-shadow 0.2s;
   padding: 0.5rem 1.3rem;
   border-radius: 0.4rem !important;
 }
@@ -626,18 +627,21 @@ label.form-check-label {
   transition: background-color 0.3s, -webkit-transform 0.3s ease-in-out;
   -o-transition: transform 0.3s ease-in-out, background-color 0.3s;
   transition: transform 0.3s ease-in-out, background-color 0.3s;
-  transition: transform 0.3s ease-in-out, background-color 0.3s, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s,
+    -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s,
+    -webkit-transform 0.3s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-shadow: 0 0 5px #ac9d9d;
-          box-shadow: 0 0 5px #ac9d9d;
+  box-shadow: 0 0 5px #ac9d9d;
   font-size: 14px;
   cursor: pointer;
 }
@@ -648,11 +652,11 @@ label.form-check-label {
   color: var(--green-color);
   background-color: white;
   -webkit-transform: translateX(25px);
-      -ms-transform: translateX(25px);
-          transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  transform: translateX(25px);
   padding: 0.5rem;
   -webkit-box-shadow: 0px 0px 5px;
-          box-shadow: 0px 0px 5px;
+  box-shadow: 0px 0px 5px;
 }
 
 .form-switch .form-check-input:checked {
@@ -663,15 +667,14 @@ label.form-check-label {
 
 .form-switch .form-check-input:focus {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
-
-.dropdown-item.active, .dropdown-item:active{
-  background-color:var(--darkGreen-color) !important;
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--darkGreen-color) !important;
   color: var(--light-color) !important;
 }
-
 
 /* Search Component Css */
 
@@ -699,5 +702,32 @@ label.form-check-label {
 
 button.btn-close {
   border: none !important;
+  -webkit-box-shadow: none !important;
   box-shadow: none !important;
+}
+button#pagination-first-page,
+button#pagination-previous-page,
+button#pagination-next-page,
+button#pagination-last-page {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  &:active {
+    background-color: var(--darkGreen-color) !important;
+  }
+}
+
+.categories-tabs.nav.nav-tabs {
+  background: var(--inputColor);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0.2rem 0.3rem 0.3rem !important;
+  border-radius: 0.5rem;
+}
+
+.categories-tabs.nav.nav-tabs li button.active {
+  background: var(--light-color) !important;
+  color: var(--dark-color) !important;
+  font-weight: 600 !important;
 }
