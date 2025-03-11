@@ -11,7 +11,7 @@ import {
 } from "react-router";
 
 import Layout from "./Layout";
-import { Home, SinglePage, Categories, Chains } from "./components";
+import { Home, SinglePage, Categories, Chains, Highlights, NewCryptocurrencies, CryptoGainersLosers } from "./components";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +20,9 @@ const router = createBrowserRouter(
       <Route path="/singlepage" element={<SinglePage />} />
       <Route path="/categories" element={<Categories />} />
       <Route path="/chains" element={<Chains />} />
+      <Route path="/highlights" element={<Highlights />} />
+      <Route path="/new-cryptocurrencies" element={<NewCryptocurrencies />} />
+      <Route path="/crypto-gainers-losers" element={<CryptoGainersLosers />} />
     </Route>
   )
 );

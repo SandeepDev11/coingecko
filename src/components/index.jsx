@@ -41,6 +41,13 @@ import PiStatsCard from "./SearchComponent/PiStatsCard";
 import Categories from "./Cryptocurrencies/Categories/Categories";
 import CryptoTreemap from "./Cryptocurrencies/Categories/CryptoTreemap";
 import Chains from "./Cryptocurrencies/Chains/Chains";
+import Highlights from "./Cryptocurrencies/Highlights/Highlights";
+import CoinDataList from "./Cryptocurrencies/Highlights/CoinDataList";
+import CoinRow from "./Cryptocurrencies/Highlights/CoinRow";
+import TrendingCategories from "./Cryptocurrencies/Highlights/TrendingCategories";
+import NewCryptocurrencies from "./Cryptocurrencies/NewCryptocurrencies/NewCryptocurrencies";
+import CryptoGainersLosers from "./Cryptocurrencies/CryptoGainersLosers/CryptoGainersLosers";
+
 
 export {
   Header,
@@ -65,4 +72,10 @@ export {
   TabData,
   CryptoTreemap,
   Chains,
+  Highlights,
+  CoinDataList,
+  CoinRow,
+  TrendingCategories,
+  NewCryptocurrencies,
+  CryptoGainersLosers,
 };

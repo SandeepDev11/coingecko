@@ -63,7 +63,7 @@ const Home = () => {
           label: "New Cryptocurrencies",
         },
         {
-          to: "/gainers-losers",
+          to: "/crypto-gainers-losers",
           icon: RiArrowUpDownFill,
           label: "Gainers & Losers",
         },

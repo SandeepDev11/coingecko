@@ -14,7 +14,7 @@ import redGraph from "../../assets/images/redGraph.svg";
 import greenGraph from "../../assets/images/greenGraph.svg";
 import trandingIconsImg from "../../assets/images/icons1.webp";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { Link } from "react-router-dom";;
+import { Link } from "react-router-dom";
 import CoinList from "../CoinList/CoinList";
 import FaqSection from "./FaqSection";
 import blogImg from "../../assets/images/blog.webp";
@@ -77,7 +77,6 @@ const Home = () => {
       valueTrandingPercent: "6.8%",
     },
   ];
-
 
   const blogCardData = [
     {

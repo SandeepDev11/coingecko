@@ -60,6 +60,7 @@ function Chains() {
           </Row>
         </Container>
       </section>
+
       {/* Box Market Section */}
       {showSection && (
         <section className="home-section">

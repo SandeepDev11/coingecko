@@ -16,7 +16,7 @@ function TabData() {
     {
       icons: <HiMiniNumberedList />,
       title: "Highlights",
-      tabUrl: "/",
+      tabUrl: "/highlights",
     },
     {
       icons: <FaShapes />,
@@ -31,11 +31,6 @@ function TabData() {
     {
       icons: <FaFire />,
       title: "Polkadot Ecosystem",
-      tabUrl: "/",
-    },
-    {
-      icons: <HiMiniNumberedList />,
-      title: "Highlights",
       tabUrl: "/",
     },
   ];
