@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Breadcrumbs from "../../Breadcrumbs/Breadcrumbs";
-import { Container, Row, Col } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "react-bootstrap";
 import CoinList from "../../CoinList/CoinList";
 import blogImg from "../../../assets/images/blog.webp";
 import trandingIconsImg from "../../../assets/images/icons1.webp";
 import { Link } from "react-router";
 import BlogCard from "../../Blog/BlogCard";
+import { FaCheck } from "react-icons/fa";
 
 const blogCardData = [
   {
@@ -47,6 +56,15 @@ const blogCardData = [
 ];
 
 function CryptoGainersLosers() {
+  const [selectedOption, setSelectedOption] = useState("Market Cap");
+
+  const options = [
+    "Market Cap",
+    "24H Volume",
+    "24H Gainers",
+    "24H Looser",
+    "Tranding",
+  ];
   return (
     <>
       <section className="categories-section pt-4">
@@ -68,7 +86,7 @@ function CryptoGainersLosers() {
             <Col lg={12}>
               <div className="home-section-content">
                 <Row>
-                  <Col lg={10}>
+                  <Col lg={9}>
                     <h4 className="fw-bold">Top Crypto Gainers and Losers</h4>
                     <p>
                       Discover the largest gainers and losers across all major
@@ -76,12 +94,93 @@ function CryptoGainersLosers() {
                       movements in the last 24 hours.
                     </p>
                   </Col>
-                  <Col lg={2}>
-                    <div className="d-flex justify-content-end">
-                      <button className="CusBtn">
-                        <span>View All</span>
-                      </button>
-                    </div>
+                  <Col lg={3}>
+                    <Row>
+                      <Col lg={6}>
+                        <div className="CusBtn text-center py-0">
+                          <Dropdown>
+                            <DropdownToggle
+                              id="dropdown-basic"
+                              style={{ color: "var(--dark-color)" }}
+                            >
+                              <span
+                                style={{ fontWeight: "600", fontSize: "13px" }}
+                              >
+                                {selectedOption}
+                              </span>
+                            </DropdownToggle>
+
+                            <DropdownMenu>
+                              {options.map((option) => (
+                                <DropdownItem
+                                  key={option}
+                                  onClick={() => setSelectedOption(option)}
+                                  as={Link}
+                                  to=""
+                                >
+                                  <div className="categories-dropdown-item">
+                                    <div className="d-flex align-items-center gap-5">
+                                      <span>{option}</span>
+                                      {selectedOption === option && (
+                                        <span
+                                          style={{
+                                            color: "var(--darkGreen-color)",
+                                          }}
+                                        >
+                                          <FaCheck />
+                                        </span>
+                                      )}
+                                    </div>
+                                  </div>
+                                </DropdownItem>
+                              ))}
+                            </DropdownMenu>
+                          </Dropdown>
+                        </div>
+                      </Col>
+                      <Col lg={6}>
+                        <div className="CusBtn text-center py-0">
+                          <Dropdown>
+                            <DropdownToggle
+                              id="dropdown-basic"
+                              style={{ color: "var(--dark-color)" }}
+                            >
+                              <span
+                                style={{ fontWeight: "600", fontSize: "13px" }}
+                              >
+                                {selectedOption}
+                              </span>
+                            </DropdownToggle>
+
+                            <DropdownMenu>
+                              {options.map((option) => (
+                                <DropdownItem
+                                  key={option}
+                                  onClick={() => setSelectedOption(option)}
+                                  as={Link}
+                                  to=""
+                                >
+                                  <div className="categories-dropdown-item">
+                                    <div className="d-flex align-items-center gap-5">
+                                      <span>{option}</span>
+                                      {selectedOption === option && (
+                                        <span
+                                          style={{
+                                            color: "var(--darkGreen-color)",
+                                          }}
+                                        >
+                                          <FaCheck />
+                                        </span>
+                                      )}
+                                    </div>
+                                  </div>
+                                </DropdownItem>
+                              ))}
+                            </DropdownMenu>
+                          </Dropdown>
+                        </div>
+                      </Col>
+                    </Row>
                   </Col>
                 </Row>
               </div>

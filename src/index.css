@@ -610,6 +610,8 @@ label.form-check-label {
     -webkit-box-shadow 0.2s;
   transition: background-color 0.3s ease-in-out, box-shadow 0.2s,
     -webkit-box-shadow 0.2s;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.2s,
+    -webkit-box-shadow 0.2s;
   padding: 0.5rem 1.3rem;
   border-radius: 0.4rem !important;
 }
@@ -627,6 +629,8 @@ label.form-check-label {
   transition: background-color 0.3s, -webkit-transform 0.3s ease-in-out;
   -o-transition: transform 0.3s ease-in-out, background-color 0.3s;
   transition: transform 0.3s ease-in-out, background-color 0.3s;
+  transition: transform 0.3s ease-in-out, background-color 0.3s,
+    -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, background-color 0.3s,
     -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, background-color 0.3s,
@@ -730,4 +734,24 @@ button#pagination-last-page {
   background: var(--light-color) !important;
   color: var(--dark-color) !important;
   font-weight: 600 !important;
+}
+
+.allCoin-DropDown {
+  max-height: 280px;
+  width: 220px;
+  overflow-y: auto;
+}
+
+.allCoin-DropDown-top {
+  background-color: var(--inputColor);
+}
+
+.allcoinScroll {
+  overflow-x: auto;
+}
+
+.ComCryto .categories-tabs {
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
 }

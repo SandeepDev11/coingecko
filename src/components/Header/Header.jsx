@@ -67,26 +67,26 @@ const Home = () => {
           icon: RiArrowUpDownFill,
           label: "Gainers & Losers",
         },
-        { to: "/all-coins", icon: RiCoinFill, label: "All Coins" },
+        { to: "/all-cryptocurrencies", icon: RiCoinFill, label: "All Coins" },
         {
-          to: "/compare-coins-nft",
+          to: "/compare-cryptocurrencies",
           icon: RiScales3Fill,
           label: "Compare Coins and NFT",
         },
         { to: "/converter", icon: RiExchangeDollarFill, label: "Converter" },
-        { to: "/global-chart", icon: RiGlobalFill, label: "Global Chart" },
+        { to: "/global-charts", icon: RiGlobalFill, label: "Global Chart" },
       ],
     },
     {
       title: "Exchanges",
       items: [
         {
-          to: "/crypto-exchanges",
+          to: "/exchanges",
           icon: RiExchangeDollarFill,
           label: "Crypto Exchanges",
         },
         {
-          to: "/decentralized-exchanges",
+          to: "/decentralized",
           icon: RiSwapFill,
           label: "Decentralized Exchanges",
         },
@@ -97,16 +97,16 @@ const Home = () => {
       title: "NFT",
       items: [
         {
-          to: "/nft-floor-price",
+          to: "/nft",
           icon: RiPriceTag3Fill,
           label: "NFT Floor Price",
         },
         {
-          to: "/nft-related-coins",
+          to: "/categories/non-fungible-tokens-nft",
           icon: RiCoinsFill,
           label: "NFT Related Coins",
         },
-        { to: "/nft-watchlist", icon: RiHeartFill, label: "NFT Watchlist" },
+        { to: "/portfolio", icon: RiHeartFill, label: "NFT Watchlist" },
         {
           to: "/nft-global-chart",
           icon: RiBarChartFill,

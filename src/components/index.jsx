@@ -37,7 +37,7 @@ import AuthModal from "./Auth/AuthModal";
 import SearchComponent from "./SearchComponent/SearchComponent";
 import PiStatsCard from "./SearchComponent/PiStatsCard";
 
-// Cryptocurrencies
+// CryptocurrenciesMenu
 import Categories from "./Cryptocurrencies/Categories/Categories";
 import CryptoTreemap from "./Cryptocurrencies/Categories/CryptoTreemap";
 import Chains from "./Cryptocurrencies/Chains/Chains";
@@ -47,7 +47,20 @@ import CoinRow from "./Cryptocurrencies/Highlights/CoinRow";
 import TrendingCategories from "./Cryptocurrencies/Highlights/TrendingCategories";
 import NewCryptocurrencies from "./Cryptocurrencies/NewCryptocurrencies/NewCryptocurrencies";
 import CryptoGainersLosers from "./Cryptocurrencies/CryptoGainersLosers/CryptoGainersLosers";
+import AllCoins from "./Cryptocurrencies/AllCoins/AllCoins";
+import MarketCapCalculator from "./MarketCapCalculator/MarketCapCalculator";
+import CompareCryptocurrencies from "./Cryptocurrencies/CompareCryptocurrencies/CompareCryptocurrencies"
+import CurrenciesCalculator from "./CurrenciesCalculator/CurrenciesCalculator"
+import Converter from "./Cryptocurrencies/Converter/Converter"
+import GlobalCharts from "./Cryptocurrencies/GlobalCharts/GlobalCharts"
 
+// ExchangesMenu
+import CryptoExchanges from "./ExchangesMenu/CryptoExchanges"
+import DecenterExchange from "./ExchangesMenu/DecenterExchange"
+import Derivatives from "./ExchangesMenu/Derivatives"
+
+// NftMenu
+import NftFloorPrice from "./NftMenu/NftFloorPrice"
 
 export {
   Header,
@@ -78,4 +91,14 @@ export {
   TrendingCategories,
   NewCryptocurrencies,
   CryptoGainersLosers,
+  AllCoins,
+  MarketCapCalculator,
+  CompareCryptocurrencies,
+  CurrenciesCalculator,
+  Converter,
+  GlobalCharts,
+  CryptoExchanges,
+  DecenterExchange,
+  Derivatives,
+  NftFloorPrice,
 };

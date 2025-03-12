@@ -29,7 +29,7 @@ const Footer = () => {
       ],
     },
     {
-      title: "About CoinGecko",
+      title: "About ProCoinMaster",
       links: [
         "About Us",
         { text: "Careers", badge: "Join Us" },
@@ -65,12 +65,12 @@ const Footer = () => {
         <Row className="gy-4" style={{borderBottom: "1px solid var(--border-color)"}}>
           <Col lg={5}>
             <h5 className="fw-bold">
-              <img src={logo} alt="CoinGecko" width="150" className="pb-2" />
+              <img src={logo} alt="procoinmaster" width="150" className="pb-2" />
             </h5>
             <p style={{color: "#64748b"}}>
-              CoinGecko provides a fundamental analysis of the crypto market. In
+              ProCoinMaster provides a fundamental analysis of the crypto market. In
               addition to tracking price, volume, and market capitalization,
-              CoinGecko tracks community growth, open-source code development,
+              ProCoinMaster tracks community growth, open-source code development,
               major events, and on-chain metrics.
             </p>
           </Col>
@@ -121,7 +121,7 @@ const Footer = () => {
 
         <Row className="mt-4 align-items-center">
           <Col className="text-start">
-            <p>© 2025 CoinGecko. All Rights Reserved.</p>
+            <p>© 2025 ProCoinMaster. All Rights Reserved.</p>
           </Col>
           <Col>
             <div className="d-flex justify-content-end pb-4">
