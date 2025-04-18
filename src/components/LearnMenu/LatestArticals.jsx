@@ -3,9 +3,9 @@ import TabHome from "../Home/TabHome";
 import { Col, Container, Row } from "react-bootstrap";
 import articalImg from "../../assets/Images/articals.webp";
 import { Link } from "react-router";
-import MainArticleCard from "./LearnTabs/MainArticleCard";
-import SideArticlesList from "./LearnTabs/SideArticlesList";
-import NewsletterSubscription from "./LearnTabs/NewsletterSubscription";
+import MainArticleCard from "./MainArticleCard";
+import SideArticlesList from "./SideArticlesList";
+import NewsletterSubscription from "./NewsletterSubscription";
 
 
 const LatestArticals = () => {
