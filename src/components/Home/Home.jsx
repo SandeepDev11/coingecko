@@ -21,6 +21,7 @@ import blogImg from "../../assets/images/blog.webp";
 import BlogCard from "../Blog/BlogCard";
 import CustomizeTable from "./CustomizeTable";
 import TabData from "./TabData";
+import coinimg from "../../assets/Images/bitcoin.webp"
 const Home = () => {
   const [showDesc, setShowDesc] = useState(true);
   const [showSection, setShowSection] = useState(true);
@@ -32,21 +33,21 @@ const Home = () => {
 
   const boxMarketData = [
     {
-      trandingIcons: "https://cryptologos.cc/logos/bitcoin-btc-logo.png",
+      trandingIcons: coinimg,
       trandingIconsAlt: "Bitcoin",
       trandingIconsName: "Bitcoin",
       valueTranding: "$62,345",
       valueTrandingPercent: "5.2%",
     },
     {
-      trandingIcons: "https://cryptologos.cc/logos/ethereum-eth-logo.png",
+      trandingIcons: coinimg,
       trandingIconsAlt: "Ethereum",
       trandingIconsName: "Ethereum",
       valueTranding: "$3,450",
       valueTrandingPercent: "2.8%",
     },
     {
-      trandingIcons: "https://cryptologos.cc/logos/solana-sol-logo.png",
+      trandingIcons: coinimg,
       trandingIconsAlt: "Solana",
       trandingIconsName: "Solana",
       valueTranding: "$145.23",
@@ -56,21 +57,21 @@ const Home = () => {
 
   const boxMarketData2 = [
     {
-      trandingIcons: "https://cryptologos.cc/logos/binance-coin-bnb-logo.png",
+      trandingIcons: coinimg,
       trandingIconsAlt: "Binance Coin",
       trandingIconsName: "Binance Coin",
       valueTranding: "$410.45",
       valueTrandingPercent: "3.2%",
     },
     {
-      trandingIcons: "https://cryptologos.cc/logos/xrp-xrp-logo.png",
+      trandingIcons: coinimg,
       trandingIconsAlt: "XRP",
       trandingIconsName: "XRP",
       valueTranding: "$0.64",
       valueTrandingPercent: "4.5%",
     },
     {
-      trandingIcons: "https://cryptologos.cc/logos/cardano-ada-logo.png",
+      trandingIcons: coinimg,
       trandingIconsAlt: "Cardano",
       trandingIconsName: "Cardano",
       valueTranding: "$0.78",

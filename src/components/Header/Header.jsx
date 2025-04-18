@@ -102,16 +102,16 @@ const Home = () => {
           label: "NFT Floor Price",
         },
         {
-          to: "/categories/non-fungible-tokens-nft",
+          to: "/nft",
           icon: RiCoinsFill,
           label: "NFT Related Coins",
         },
-        { to: "/portfolio", icon: RiHeartFill, label: "NFT Watchlist" },
-        {
-          to: "/nft-global-chart",
-          icon: RiBarChartFill,
-          label: "NFT Global Chart",
-        },
+        // { to: "/portfolio", icon: RiHeartFill, label: "NFT Watchlist" },
+        // {
+        //   to: "/nft-global-chart",
+        //   icon: RiBarChartFill,
+        //   label: "NFT Global Chart",
+        // },
       ],
     },
     {
@@ -125,14 +125,14 @@ const Home = () => {
         },
         { to: "/news", icon: RiNewspaperFill, label: "News" },
         { to: "/reports", icon: RiFileTextFill, label: "Reports" },
-        {
-          to: "/learn-earn",
-          icon: RiMoneyDollarCircleFill,
-          label: "Learn & Earn",
-        },
-        { to: "/videos", icon: RiVideoFill, label: "Videos" },
-        { to: "/newsletter", icon: RiMailFill, label: "Newsletter" },
-        { to: "/glossary", icon: RiListCheck2, label: "Glossary" },
+        // {
+        //   to: "/learn-earn",
+        //   icon: RiMoneyDollarCircleFill,
+        //   label: "Learn & Earn",
+        // },
+        // { to: "/videos", icon: RiVideoFill, label: "Videos" },
+        // { to: "/newsletter", icon: RiMailFill, label: "Newsletter" },
+        // { to: "/glossary", icon: RiListCheck2, label: "Glossary" },
       ],
     },
   ];

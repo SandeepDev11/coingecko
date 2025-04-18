@@ -5,6 +5,7 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import chartImg from "../../assets/images/greenGraph.svg";
 import chartImg2 from "../../assets/images/redGraph.svg";
+import coinimg from "../../assets/Images/bitcoin.webp"
 
 // ChangeIndicator Component
 const ChangeIndicator = ({ value, isPositive }) => {

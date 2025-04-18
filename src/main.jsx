@@ -38,7 +38,10 @@ const router = createBrowserRouter(
       <Route path="decentralized" element={<DecenterExchange />} />
       <Route path="nft" element={<NftFloorPrice />} />
     </Route>
-  )
+  ),
+  {
+    basename: "/procoinmaster/", // Replace with your actual base path
+  }
 );
 
 createRoot(document.getElementById("root")).render(
