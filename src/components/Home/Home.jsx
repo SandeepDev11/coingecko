@@ -71,7 +71,7 @@ const Home = () => {
       valueTrandingPercent: "4.5%",
     },
     {
-      trandingIcons: coinimg,
+      trandingIcons: coinimg  ,
       trandingIconsAlt: "Cardano",
       trandingIconsName: "Cardano",
       valueTranding: "$0.78",

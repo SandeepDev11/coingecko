@@ -16,7 +16,16 @@ import {
   CryptoGainersLosers, AllCoins, CompareCryptocurrencies, Converter, 
   GlobalCharts, CryptoExchanges, DecenterExchange, 
   Derivatives,
-  NftFloorPrice
+  NftFloorPrice, LearnCrypto,
+  LatestArticals,
+  AirdropGuides,
+  CoinsTokens,
+  Guides,
+  WalletsBridges,
+  ApiArticals,
+  ReviewsArticals,
+  ResearchoInsights,
+  NewsArticals
 } from "./components";
 
 const router = createBrowserRouter(
@@ -37,10 +46,20 @@ const router = createBrowserRouter(
       <Route path="derivatives" element={<Derivatives />} />
       <Route path="decentralized" element={<DecenterExchange />} />
       <Route path="nft" element={<NftFloorPrice />} />
+      <Route path="learn" element={<LearnCrypto />} />
+      <Route path="latest" element={<LatestArticals />} />
+      <Route path="airdrop-guides" element={<AirdropGuides />} />
+      <Route path="coins-and-tokens" element={<CoinsTokens />} />
+      <Route path="guides" element={<Guides />} />
+      <Route path="wallets-and-bridges" element={<WalletsBridges />} />
+      <Route path="api" element={<ApiArticals />} />
+      <Route path="reviews" element={<ReviewsArticals />} />
+      <Route path="research" element={<ResearchoInsights />} />
+      <Route path="news" element={<NewsArticals />} />
     </Route>
   ),
   {
-    basename: "/procoinmaster/", // Replace with your actual base path
+    basename: "/procoinmaster/",
   }
 );
 

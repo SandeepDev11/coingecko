@@ -117,9 +117,9 @@ const Home = () => {
     {
       title: "Learn",
       items: [
-        { to: "/learn-crypto", icon: RiBookOpenFill, label: "Learn Crypto" },
+        { to: "/learn", icon: RiBookOpenFill, label: "Learn Crypto" },
         {
-          to: "/research-insights",
+          to: "/research",
           icon: RiSearchFill,
           label: "Research Insights",
         },

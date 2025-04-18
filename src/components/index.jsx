@@ -49,18 +49,33 @@ import NewCryptocurrencies from "./Cryptocurrencies/NewCryptocurrencies/NewCrypt
 import CryptoGainersLosers from "./Cryptocurrencies/CryptoGainersLosers/CryptoGainersLosers";
 import AllCoins from "./Cryptocurrencies/AllCoins/AllCoins";
 import MarketCapCalculator from "./MarketCapCalculator/MarketCapCalculator";
-import CompareCryptocurrencies from "./Cryptocurrencies/CompareCryptocurrencies/CompareCryptocurrencies"
-import CurrenciesCalculator from "./CurrenciesCalculator/CurrenciesCalculator"
-import Converter from "./Cryptocurrencies/Converter/Converter"
-import GlobalCharts from "./Cryptocurrencies/GlobalCharts/GlobalCharts"
+import CompareCryptocurrencies from "./Cryptocurrencies/CompareCryptocurrencies/CompareCryptocurrencies";
+import CurrenciesCalculator from "./CurrenciesCalculator/CurrenciesCalculator";
+import Converter from "./Cryptocurrencies/Converter/Converter";
+import GlobalCharts from "./Cryptocurrencies/GlobalCharts/GlobalCharts";
 
 // ExchangesMenu
-import CryptoExchanges from "./ExchangesMenu/CryptoExchanges"
-import DecenterExchange from "./ExchangesMenu/DecenterExchange"
-import Derivatives from "./ExchangesMenu/Derivatives"
+import CryptoExchanges from "./ExchangesMenu/CryptoExchanges";
+import DecenterExchange from "./ExchangesMenu/DecenterExchange";
+import Derivatives from "./ExchangesMenu/Derivatives";
 
 // NftMenu
-import NftFloorPrice from "./NftMenu/NftFloorPrice"
+import NftFloorPrice from "./NftMenu/NftFloorPrice";
+
+// LearnMenu
+import LearnCrypto from "./LearnMenu/LearnCrypto";
+import LatestArticals from "./LearnMenu/LatestArticals";
+import NewsletterSubscription from "./LearnMenu/LearnTabs/NewsletterSubscription";
+import MainArticleCard from "./LearnMenu/LearnTabs/MainArticleCard";
+import SideArticlesList from "./LearnMenu/LearnTabs/SideArticlesList";
+import AirdropGuides from "./LearnMenu/LearnTabs/AirdropGuides";
+import CoinsTokens from "./LearnMenu/LearnTabs/CoinsTokens";
+import Guides from "./LearnMenu/LearnTabs/Guides";
+import WalletsBridges from "./LearnMenu/LearnTabs/WalletsBridges";
+import ApiArticals from "./LearnMenu/LearnTabs/ApiArticals";
+import ReviewsArticals from "./LearnMenu/LearnTabs/ReviewsArticals";
+import ResearchoInsights from "./LearnMenu/ResearchoInsights";
+import NewsArticals from "./LearnMenu/NewsArticals";
 
 export {
   Header,
@@ -101,4 +116,17 @@ export {
   DecenterExchange,
   Derivatives,
   NftFloorPrice,
+  LearnCrypto,
+  NewsletterSubscription,
+  MainArticleCard,
+  SideArticlesList,
+  LatestArticals,
+  AirdropGuides,
+  CoinsTokens,
+  Guides,
+  WalletsBridges,
+  ApiArticals,
+  ReviewsArticals,
+  ResearchoInsights,
+  NewsArticals,
 };

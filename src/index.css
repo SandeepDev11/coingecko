@@ -755,3 +755,25 @@ button#pagination-last-page {
   -ms-flex-pack: center !important;
   justify-content: center !important;
 }
+
+.learnBg {
+  background: var(--darkGreen-color);
+  color: var(--light-color);
+}
+
+.sideArticals-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+}
+
+.sideArtical-Img {
+  max-width: 30%;
+}
+
+.starIcon {
+  color: #eab308;
+}
