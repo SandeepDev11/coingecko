@@ -91,7 +91,7 @@ const ApiArticals = () => {
         </Container>
       </section>
 
-      <NewsletterSubscription />
+      <NewsletterSubscription  />
     </main>
   );
 };

@@ -76,6 +76,7 @@ import ApiArticals from "./LearnMenu/LearnTabs/ApiArticals";
 import ReviewsArticals from "./LearnMenu/LearnTabs/ReviewsArticals";
 import ResearchoInsights from "./LearnMenu/ResearchoInsights";
 import NewsArticals from "./LearnMenu/NewsArticals";
+import Reportsarticals from "./LearnMenu/Reportsarticals";
 
 export {
   Header,
@@ -129,4 +130,5 @@ export {
   ReviewsArticals,
   ResearchoInsights,
   NewsArticals,
+  Reportsarticals,
 };

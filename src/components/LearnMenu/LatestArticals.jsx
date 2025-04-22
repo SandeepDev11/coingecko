@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import TabHome from "../Home/TabHome";
 import { Col, Container, Row } from "react-bootstrap";
 import articalImg from "../../assets/Images/articals.webp";
-import { Link } from "react-router";
-import MainArticleCard from "./MainArticleCard";
-import SideArticlesList from "./SideArticlesList";
-import NewsletterSubscription from "./NewsletterSubscription";
+import MainArticleCard from "./LearnTabs/MainArticleCard";
+import NewsletterSubscription from "./LearnTabs/NewsletterSubscription";
 
 
 const LatestArticals = () => {
@@ -20,33 +18,6 @@ const LatestArticals = () => {
     { title: "Wallets And Bridges", tabUrl: "/wallets-and-bridges" },
     { title: "API", tabUrl: "/api" },
     { title: "Reviews", tabUrl: "/reviews" },
-  ];
-
-  const sideArticles = [
-    {
-      title: "How to Build a Crypto Research AI Agent with Chromia's Vector DB",
-      author: "CJ",
-      date: "December 01, 2024",
-      rating: "4.23",
-      votes: "60",
-      image: articalImg,
-    },
-    {
-      title: "How to Build a Simple AI Model for Crypto Price Prediction",
-      author: "Roxait",
-      date: "March 27, 2025",
-      rating: "4.5",
-      votes: "6",
-      image: articalImg,
-    },
-    {
-      title: "How to Build Your Own Crypto AI Agent",
-      author: "Roxait",
-      date: "April 11, 2025",
-      rating: "4.0",
-      votes: "9",
-      image: articalImg,
-    },
   ];
 
   const mainArticle = {

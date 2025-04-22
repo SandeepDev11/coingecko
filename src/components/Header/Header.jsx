@@ -124,7 +124,7 @@ const Home = () => {
           label: "Research Insights",
         },
         { to: "/news", icon: RiNewspaperFill, label: "News" },
-        { to: "/reports", icon: RiFileTextFill, label: "Reports" },
+        { to: "/publications/reports", icon: RiFileTextFill, label: "Reports" },
         // {
         //   to: "/learn-earn",
         //   icon: RiMoneyDollarCircleFill,

@@ -25,7 +25,8 @@ import {
   ApiArticals,
   ReviewsArticals,
   ResearchoInsights,
-  NewsArticals
+  NewsArticals,
+  Reportsarticals
 } from "./components";
 
 const router = createBrowserRouter(
@@ -56,6 +57,7 @@ const router = createBrowserRouter(
       <Route path="reviews" element={<ReviewsArticals />} />
       <Route path="research" element={<ResearchoInsights />} />
       <Route path="news" element={<NewsArticals />} />
+      <Route path="publications/reports" element={<Reportsarticals />} />
     </Route>
   ),
   {
