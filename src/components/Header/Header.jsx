@@ -157,7 +157,12 @@ const Home = () => {
                       style={{ fontSize: "12px" }}
                       title={<IoSettingsOutline />}
                     >
-                      <NavDropdown.Item to="/#">
+                      <NavDropdown.Item to="settings" as={Link}>
+                        <div className="d-flex justify-content-between align-items-center gap-5">
+                          <div>Setting</div>
+                        </div>
+                      </NavDropdown.Item>
+                      <NavDropdown.Item to="/#" >
                         <div className="d-flex justify-content-between align-items-center gap-5">
                           <div>Language</div>
                           <div>English</div>
@@ -174,7 +179,6 @@ const Home = () => {
                         className="d-flex justify-content-between align-items-center "
                       >
                         <Link
-                          to="/#"
                           className="text-decoration-none text-dark flex-grow-1"
                         >
                           <div className="d-flex justify-content-between align-items-center gap-5">

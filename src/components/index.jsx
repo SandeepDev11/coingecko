@@ -78,6 +78,14 @@ import ResearchoInsights from "./LearnMenu/ResearchoInsights";
 import NewsArticals from "./LearnMenu/NewsArticals";
 import Reportsarticals from "./LearnMenu/Reportsarticals";
 
+
+// Settings
+import Settings from "./Dashboard/Settings"
+import AccountSecurity from "./Dashboard/SettingsPages/AccountSecurity"
+import Notifications from "./Dashboard/SettingsPages/Notifications"
+import Profile from "./Dashboard/SettingsPages/Profile"
+import Sidebar from "./Dashboard/SidebarDashboard/Sidebar"
+
 export {
   Header,
   TopbarLeft,
@@ -131,4 +139,9 @@ export {
   ResearchoInsights,
   NewsArticals,
   Reportsarticals,
+  Settings, 
+  AccountSecurity,
+  Notifications,
+  Profile,
+  Sidebar,
 };

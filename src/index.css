@@ -117,6 +117,7 @@ a {
   display: none;
 }
 
+label.rightTop-section-content-signup,
 button.rightTop-section-content-signup {
   padding-block: 0.2rem;
   padding-inline: 0.625rem;
@@ -516,6 +517,7 @@ button {
     -webkit-transform: translatey(3px);
     -ms-transform: translatey(3px);
     transform: translatey(3px);
+    z-index: 9;
   }
 }
 
@@ -777,3 +779,77 @@ button#pagination-last-page {
 .starIcon {
   color: #eab308;
 }
+
+/* Settings */
+.settingWrapper {
+  padding-block: 1.2rem;
+}
+
+.sidebarText span {
+  position: relative;
+  font-weight: 500;
+}
+.sidebarText span::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 25px;
+  background-color: var(--green-color);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.avatarText-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.avatarImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--light-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.profileAccordionHeader .accordion-button {
+  padding: 1rem;
+}
+.profileAccordionHeader .accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.avatarInput-wrapper {
+  position: relative;
+}
+.avatarInput-wrapper textarea,
+.avatarInput-wrapper input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.avatarInput-wrapper .formText-above {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.profileTitle,
+.avatarWrapper Form {
+  border-bottom: 1px solid var(--border-color) !important;
+  padding-bottom: 1.2rem;
+}
+
+.sidebarWrapper {
+  border-right: 1px solid var(--border-color) !important;
+  height: 100%;
+}
+

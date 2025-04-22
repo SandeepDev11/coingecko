@@ -11,12 +11,23 @@ import {
 } from "react-router";
 
 import Layout from "./Layout";
-import { 
-  Home, SinglePage, Categories, Chains, Highlights, NewCryptocurrencies, 
-  CryptoGainersLosers, AllCoins, CompareCryptocurrencies, Converter, 
-  GlobalCharts, CryptoExchanges, DecenterExchange, 
+import {
+  Home,
+  SinglePage,
+  Categories,
+  Chains,
+  Highlights,
+  NewCryptocurrencies,
+  CryptoGainersLosers,
+  AllCoins,
+  CompareCryptocurrencies,
+  Converter,
+  GlobalCharts,
+  CryptoExchanges,
+  DecenterExchange,
   Derivatives,
-  NftFloorPrice, LearnCrypto,
+  NftFloorPrice,
+  LearnCrypto,
   LatestArticals,
   AirdropGuides,
   CoinsTokens,
@@ -26,7 +37,10 @@ import {
   ReviewsArticals,
   ResearchoInsights,
   NewsArticals,
-  Reportsarticals
+  Reportsarticals,
+  Settings,
+  AccountSecurity,
+  Notifications,
 } from "./components";
 
 const router = createBrowserRouter(
@@ -40,7 +54,10 @@ const router = createBrowserRouter(
       <Route path="new-cryptocurrencies" element={<NewCryptocurrencies />} />
       <Route path="crypto-gainers-losers" element={<CryptoGainersLosers />} />
       <Route path="all-cryptocurrencies" element={<AllCoins />} />
-      <Route path="compare-cryptocurrencies" element={<CompareCryptocurrencies />} />
+      <Route
+        path="compare-cryptocurrencies"
+        element={<CompareCryptocurrencies />}
+      />
       <Route path="converter" element={<Converter />} />
       <Route path="global-charts" element={<GlobalCharts />} />
       <Route path="exchanges" element={<CryptoExchanges />} />
@@ -58,6 +75,10 @@ const router = createBrowserRouter(
       <Route path="research" element={<ResearchoInsights />} />
       <Route path="news" element={<NewsArticals />} />
       <Route path="publications/reports" element={<Reportsarticals />} />
+      <Route path="settings" element={<Settings />}>
+        <Route path="account-security" element={<AccountSecurity />} />
+        <Route path="notifications" element={<Notifications />} />
+      </Route>
     </Route>
   ),
   {
