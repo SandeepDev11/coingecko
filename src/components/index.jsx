@@ -19,6 +19,13 @@ import BlogCard from "./Blog/BlogCard";
 
 // Footer
 import Footer from "./Footer/Footer";
+import Disclaimer from "./Footer/FooterPages/Disclaimer";
+import RequestForm from "./Footer/FooterPages/RequestForm";
+import Advertising from "./Footer/FooterPages/Advertising";
+import HelpCenter from "./Footer/FooterPages/HelpCenter";
+import Faq from "./Footer/FooterPages/Faq";
+import About from "./Footer/FooterPages/About";
+import MilestoneTimeline from "./Footer/FooterPages/MilestoneTimeline";
 
 // SinglePage
 import SinglePage from "./SinglePage/SinglePage";
@@ -53,6 +60,8 @@ import CompareCryptocurrencies from "./Cryptocurrencies/CompareCryptocurrencies/
 import CurrenciesCalculator from "./CurrenciesCalculator/CurrenciesCalculator";
 import Converter from "./Cryptocurrencies/Converter/Converter";
 import GlobalCharts from "./Cryptocurrencies/GlobalCharts/GlobalCharts";
+import TrendingCrypto from "./Cryptocurrencies/TrendingCrypto/TrendingCrypto";
+import CryptocurrencyHeatmap from "./Cryptocurrencies/CryptocurrencyHeatmap/CryptocurrencyHeatmap"
 
 // ExchangesMenu
 import CryptoExchanges from "./ExchangesMenu/CryptoExchanges";
@@ -86,62 +95,5 @@ import Notifications from "./Dashboard/SettingsPages/Notifications"
 import Profile from "./Dashboard/SettingsPages/Profile"
 import Sidebar from "./Dashboard/SidebarDashboard/Sidebar"
 
-export {
-  Header,
-  TopbarLeft,
-  MenuDropdown,
-  Home,
-  BoxMarket,
-  TabHome,
-  FaqSection,
-  CustomizeTable,
-  CoinList,
-  BlogCard,
-  Footer,
-  SinglePage,
-  CoinInfo,
-  Breadcrumbs,
-  BTCConverter,
-  AuthModal,
-  SearchComponent,
-  PiStatsCard,
-  Categories,
-  TabData,
-  CryptoTreemap,
-  Chains,
-  Highlights,
-  CoinDataList,
-  CoinRow,
-  TrendingCategories,
-  NewCryptocurrencies,
-  CryptoGainersLosers,
-  AllCoins,
-  MarketCapCalculator,
-  CompareCryptocurrencies,
-  CurrenciesCalculator,
-  Converter,
-  GlobalCharts,
-  CryptoExchanges,
-  DecenterExchange,
-  Derivatives,
-  NftFloorPrice,
-  LearnCrypto,
-  NewsletterSubscription,
-  MainArticleCard,
-  SideArticlesList,
-  LatestArticals,
-  AirdropGuides,
-  CoinsTokens,
-  Guides,
-  WalletsBridges,
-  ApiArticals,
-  ReviewsArticals,
-  ResearchoInsights,
-  NewsArticals,
-  Reportsarticals,
-  Settings, 
-  AccountSecurity,
-  Notifications,
-  Profile,
-  Sidebar,
-};
+// Exporting all components
+export { Header, TopbarLeft, MenuDropdown, Home, BoxMarket, TabHome, FaqSection, CustomizeTable, CoinList, BlogCard, Footer, SinglePage, CoinInfo, Breadcrumbs, BTCConverter, AuthModal, SearchComponent, PiStatsCard, Categories, TabData, CryptoTreemap, Chains, Highlights, CoinDataList, CoinRow, TrendingCategories, NewCryptocurrencies, CryptoGainersLosers, AllCoins, MarketCapCalculator, CompareCryptocurrencies, CurrenciesCalculator, Converter, GlobalCharts, CryptoExchanges, DecenterExchange, Derivatives, NftFloorPrice, LearnCrypto, NewsletterSubscription, MainArticleCard, SideArticlesList, LatestArticals, AirdropGuides, CoinsTokens, Guides, WalletsBridges, ApiArticals, ReviewsArticals, ResearchoInsights, NewsArticals, Reportsarticals, Settings, AccountSecurity, Notifications, Profile, Sidebar, TrendingCrypto, CryptocurrencyHeatmap, Disclaimer, RequestForm, Advertising, HelpCenter, Faq, About, MilestoneTimeline };

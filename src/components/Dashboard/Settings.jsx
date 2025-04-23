@@ -14,7 +14,10 @@ const Settings = () => {
         <Container>
           <Row>
             <Col lg={3}>
-              <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
+              <Sidebar
+                activeSection={activeSection}
+                setActiveSection={setActiveSection}
+              />
             </Col>
             <Col lg={9} className="ps-5">
               {activeSection === "profile" && <Profile />}

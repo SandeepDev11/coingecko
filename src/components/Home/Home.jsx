@@ -220,7 +220,7 @@ const Home = () => {
                     <div className="d-flex justify-content-between align-items-center px-1 boxHeading">
                       <h6 className="fw-semibold">🔥 Trending</h6>
                       <p className="mb-0">
-                        <Link to="/">
+                        <Link to="highlights/trending-crypto">
                           View All <MdKeyboardArrowRight />
                         </Link>
                       </p>
@@ -236,7 +236,7 @@ const Home = () => {
                     <div className="d-flex justify-content-between align-items-center px-1 boxHeading">
                       <h6 className="fw-semibold">🚀 Top Gainers</h6>
                       <p className="mb-0">
-                        <Link to="/">
+                        <Link to="crypto-gainers-losers">
                           View All <MdKeyboardArrowRight />
                         </Link>
                       </p>

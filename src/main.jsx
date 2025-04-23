@@ -41,6 +41,14 @@ import {
   Settings,
   AccountSecurity,
   Notifications,
+  TrendingCrypto,
+  CryptocurrencyHeatmap,
+  Disclaimer,
+  RequestForm,
+  Advertising,
+  HelpCenter,
+  Faq,
+  About,
 } from "./components";
 
 const router = createBrowserRouter(
@@ -53,11 +61,10 @@ const router = createBrowserRouter(
       <Route path="highlights" element={<Highlights />} />
       <Route path="new-cryptocurrencies" element={<NewCryptocurrencies />} />
       <Route path="crypto-gainers-losers" element={<CryptoGainersLosers />} />
+      <Route path="highlights/trending-crypto" element={<TrendingCrypto />} />
+      <Route path="cryptocurrency-heatmap" element={<CryptocurrencyHeatmap />} />
       <Route path="all-cryptocurrencies" element={<AllCoins />} />
-      <Route
-        path="compare-cryptocurrencies"
-        element={<CompareCryptocurrencies />}
-      />
+      <Route path="compare-cryptocurrencies" element={<CompareCryptocurrencies />} />
       <Route path="converter" element={<Converter />} />
       <Route path="global-charts" element={<GlobalCharts />} />
       <Route path="exchanges" element={<CryptoExchanges />} />
@@ -79,6 +86,12 @@ const router = createBrowserRouter(
         <Route path="account-security" element={<AccountSecurity />} />
         <Route path="notifications" element={<Notifications />} />
       </Route>
+      <Route path="disclaimer" element={<Disclaimer/>} />
+      <Route path="request-form" element={<RequestForm/>} />
+      <Route path="advertising" element={<Advertising/>} />
+      <Route path="help-center" element={<HelpCenter/>} />
+      <Route path="faq" element={<Faq/>} />
+      <Route path="about" element={<About/>} />
     </Route>
   ),
   {

@@ -18,6 +18,7 @@ body {
 
 :root {
   --dark-color: #222222;
+  --lightDark-color: #a5a5a5;
   --light-color: #fefefe;
   --border-color: #f3f0f0;
   --tw-ring-offset-shadow: 0 0 transparent;
@@ -785,21 +786,6 @@ button#pagination-last-page {
   padding-block: 1.2rem;
 }
 
-.sidebarText span {
-  position: relative;
-  font-weight: 500;
-}
-.sidebarText span::after {
-  position: absolute;
-  content: "";
-  width: 2px;
-  height: 25px;
-  background-color: var(--green-color);
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
 .avatarText-wrapper {
   display: flex;
   align-items: center;
@@ -832,6 +818,7 @@ button#pagination-last-page {
   width: 100%;
   padding: 0.7rem 1rem;
   border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
 }
 
 .avatarInput-wrapper .formText-above {
@@ -851,5 +838,137 @@ button#pagination-last-page {
 .sidebarWrapper {
   border-right: 1px solid var(--border-color) !important;
   height: 100%;
+  padding-right: 1rem;
 }
 
+button.sidebarLink.active ::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 25px;
+  background-color: var(--green-color);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  color: --dar;
+}
+
+.sidebarText {
+  position: relative;
+  font-weight: 500;
+}
+
+.sidebarText span {
+  color: var(--lightDark-color);
+}
+
+
+button.sidebarLink.active .sidebarText span {
+  color: var(--dark-color);
+}
+
+.adsDetails-wrapper img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 1rem;
+}
+
+.clientsImg img {
+  width: 200px;
+  margin-block: 1rem;
+}
+
+.advertisingFAQItem.accordion-item {
+  border: none;
+}
+
+.advertisingFAQItem .accordion-header .accordion-button {
+  background: #c9c9c92b !important;
+  border: none !important;
+  box-shadow: none;
+}
+
+.searchBanner {
+  height: 350px;
+  background: url(./assets/Images/helpCenter.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-position: 100% 28%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.marqueeDiv {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  position: relative;
+}
+
+.marqueeContent {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.marqueeItem {
+  padding: 0 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.timeline {
+  position: relative;
+  border-left: 3px solid #EFF2F5;
+  padding-left: 20px;
+  margin-top: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 2rem;
+}
+
+.timeline-dot {
+  width: 25px;
+  height: 25px;
+  background-color: var(--green-color, #00c853);
+  border-radius: 50%;
+  position: absolute;
+  left: -34px;
+  top: 0px;
+}
+
+.timeline-item h5 {
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item ul {
+  padding-left: 0;
+}

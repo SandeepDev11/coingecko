@@ -56,15 +56,19 @@ const blogCardData = [
 ];
 
 function CryptoGainersLosers() {
-  const [selectedOption, setSelectedOption] = useState("Market Cap");
+  const [selectedOption, setSelectedOption] = useState("24 Hours");
+  const [selectedOption2, setSelectedOption2] = useState("Top 1000");
 
   const options = [
-    "Market Cap",
-    "24H Volume",
-    "24H Gainers",
-    "24H Looser",
-    "Tranding",
+    "1 Hours",
+    "24 Hours",
+    "7 Days",
+    "14 Days",
+    "30 Days",
+    "60 Days",
+    "One Year",
   ];
+  const options2 = ["All Coins", "Top 100", "Top 300", "Top 1000"];
   return (
     <>
       <section className="categories-section pt-4">
@@ -148,22 +152,22 @@ function CryptoGainersLosers() {
                               <span
                                 style={{ fontWeight: "600", fontSize: "13px" }}
                               >
-                                {selectedOption}
+                                {selectedOption2}
                               </span>
                             </DropdownToggle>
 
                             <DropdownMenu>
-                              {options.map((option) => (
+                              {options2.map((option2) => (
                                 <DropdownItem
-                                  key={option}
-                                  onClick={() => setSelectedOption(option)}
+                                  key={option2}
+                                  onClick={() => setSelectedOption2(option2)}
                                   as={Link}
                                   to=""
                                 >
                                   <div className="categories-dropdown-item">
                                     <div className="d-flex align-items-center gap-5">
-                                      <span>{option}</span>
-                                      {selectedOption === option && (
+                                      <span>{option2}</span>
+                                      {selectedOption === option2 && (
                                         <span
                                           style={{
                                             color: "var(--darkGreen-color)",
@@ -193,9 +197,11 @@ function CryptoGainersLosers() {
       <Container>
         <Row>
           <Col lg={6}>
+            <h5 className="fw-semibold pt-3">🚀 Top Gainers</h5>
             <CoinList />
           </Col>
           <Col lg={6}>
+            <h5 className="fw-semibold pt-3">🚨 Top Losers</h5>
             <CoinList />
           </Col>
         </Row>
